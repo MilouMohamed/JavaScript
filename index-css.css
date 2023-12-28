@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    background-color: azure;
+}
+
+.countainer input[type="button"] {
+    color: white;
+     background-color: black; 
+    padding: 10px 30px;
+    margin: 5px;
+    background-image: linear-gradient(to right,black 50%,red 50%);
+    background-image: linear-gradient(-45deg,black 40%,red 50%);
+    border: none;
+    transition:  2s 0.1s ease;
+}
+.countainer input[type="button"]:hover {
+    box-shadow: 1px 1px 10px 1px blue;
+    border: 3px dashed white ; 
+    background-image: linear-gradient(360deg,black 30%,red 50%);
+    
+}
+
+
+
+.card {
+    background-color: gray;
+    width: 400px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<!-- 
+    Mohamed Milou 
+ -->
+ */

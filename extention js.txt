@@ -1,0 +1,11 @@
+
+v3 de 188
+
+-bracket-pair-colorizer-2
+-EditorConfig for VS Code pour patrager les meme plugins
+-ESLint
+
+-indent-rainbow
+-Live Server
+-Path Intellisense
+-Prettier - Code formatter
