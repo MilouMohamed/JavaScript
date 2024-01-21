@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ferst {
+background-image: url('P01/bg.jpg');
+  width: 100%;
+  height: 400px; 
+  color: wheat;
+display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 5px;
+  overflow: hidden;
+}
+
+.ferst div  h1 {
+    font-size: 2.3em; 
+  text-shadow:0px 0px   15px black; 
+margin: 10px auto;
+
+  }
+
+  .ferst div  p {
+    font-size: 1.1em; 
+  text-shadow:0px 0px   15px black;  
+margin: 10px auto;
+    text-align: center;
+
+  }
+    
+.form_glob   
+    {
+margin: 20px auto;
+    }
+
+
+
+    .form_glob input {
+  text-transform: capitalize;
+  border: none;
+  background-color: transparent; 
+  outline: none; 
+  width: 100%; 
+  height: 30px;  
+  margin: auto 10px auto 15px;
+  font-size: 1.1em; 
+ 
+}
+.form_glob .inpt_et_btn {
+  display: flex;   
+  margin: auto 5px;
+}
+
+.form_glob .inpt_et_btn select  {
+ color:black;
+  border: none;
+  outline: none;
+  background-color: transparent; 
+}
+
+.form_glob .inpt_et_btn button  {
+ color:white;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  background-color: green; 
+  width: 90px;
+  padding: 9px;
+  text-transform:capitalize;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.ferst div form .form_glob {  
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  border-radius: 50px;
+  height: 40px;
+  width: 100%;
+  background-color: wheat;
+  padding: 3px;
+}
+
+
+
+@media screen and (max-width:620px) {
+   
+  
+  form .form_glob { 
+    display: block !important;
+  }
+  
+  form .form_glob .inpt_et_btn { 
+    justify-content: flex-end  ;
+    align-items: center  ;
+    margin-top: 15px; 
+  }
+   
+  .inpt_et_btn select  { 
+     color: white !important;;
+    
+  } 
+}
+
+
+/*** Les Images***************************************/
+
+.scened {  
+  margin: 20px auto; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;  
+  flex-wrap:  wrap ;
+}
+  
+.scened .card_img {
+  width: 255px;
+  min-width: 200px;
+  object-fit:cover;
+  margin: 10px;
+  aspect-ratio: 1/1; 
+  position: relative;
+  background-color: #d5d5d5;
+}
+
+
+.scened  .card_img  img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover; 
+}
+ 
+ 
+ .dowdload_imag {  
+  width: 30px;
+  height: 30px  ;
+  background-color: white;
+  border-radius: 50%;  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   bottom: 15px;
+   right: 10px;
+   display: none;
+} 
+.card_img:hover:not(.loading_)  .dowdload_imag {
+    display: flex; 
+}
+ .dowdload_imag img{ 
+  width: 25px  !important;;
+  height: 25px  !important;; 
+   padding: 3px;
+} 
+ 
+
+.card_img.loading_  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_img.loading_  img{
+  width: 140px;
+  height: 140px; 
+}
+
+
+
+/* MIlou Mohamed */
+
+
+
+
+
+
+
+
