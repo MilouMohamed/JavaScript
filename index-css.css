@@ -5,9 +5,267 @@
 }
 
 body {
-    padding: 10px;
-    background-color: azure;
+    padding: 50px;
+    padding: 5px;
+    background-color: rgb(153, 162, 162);
+    margin: 20px;
+    margin: 2px;
+    /* height: 6000px;
+    width: 2000px;  */
+    scroll-behavior: smooth;
 }
+/*  V 144  Form Validation */
+
+.form_vali {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; 
+    padding: 10px;
+    margin: 10px;
+}
+.form_vali input:focus {
+    color: maroon;
+}
+
+
+/*  V 144 Fin  Form Validation */
+
+
+
+
+
+/* my test de click 
+.div_one,.div_two {
+    background-color: brown;
+    width: 80%;
+    height: max-content;
+    padding: 10px;
+}
+.div_two {
+    background-color: blueviolet; 
+}
+
+.div_p {
+    padding: 5px;
+}
+
+.span_one {
+    background-color: rgb(43, 226, 55); 
+}
+button.ok {
+padding: 5px 10px ;
+border: 5px solid ;
+}
+
+/*  fin my test de click */
+
+
+/* <!-- // V 114 challenge --> 
+
+ 
+.container_tsks {
+    margin: 10px auto;
+    border:2px solid black;
+    padding: 10px; 
+}
+.form_tsks   { 
+    display:  flex;
+    justify-content:space-between;
+    align-items: center; 
+    background-color: grey;
+    padding: 10px; 
+    border-radius: 5px;
+}
+.form_tsks input  {  
+    height: 35px; 
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 7px; 
+}
+.form_tsks input[type="text"] {
+    min-width: 150px;
+    width: 100%; 
+    margin-right: 10px;
+}
+
+.form_tsks input[type="submit"] {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tasks_tsks {
+    margin: 10px auto; 
+    background-color: grey; 
+    border-radius: 5px;
+    padding: 10px;
+}
+.task_conta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    border-radius: 7px;
+    background-color: white;   
+    margin: 12px 5px;
+}
+
+.task_conta button { 
+    border: none;
+    outline: none;
+    border-radius: 7px; 
+    padding: 4px 8px;
+    background-color: red;
+    font-size: 10px;
+    color: white;
+}
+
+.complit {
+    opacity: 0.6;
+}
+/* fin v 114 */
+
+/*
+.div_test_localsto {
+    margin: 20px auto;
+    
+}
+.list_color {
+    padding: 8px;
+    background-color: #f3f1e5;
+    display: flex;
+    justify-content: space-between;
+ min-width: 300px
+}
+
+.list_color button {
+    min-height: 50px;
+     min-width: 50px;
+    margin: 4px;
+    padding: none;
+    outline: none;
+    border-width: 1px;
+    box-shadow: 0 0 10px black;
+    cursor: pointer; 
+    opacity: .5;
+}
+
+.blue_ {
+    background-color: blue;
+}
+.green_ {
+    background-color: green;
+}
+
+.maginta_ {
+    background-color: magenta;
+}
+
+.red_ {
+    background-color: red;
+}
+
+.ecran_color {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+.active_los {
+    scale: 1.2;
+    opacity: 1 !important;
+
+}
+/* fin v111 */
+/*
+
+#sect01,
+#sect02 {
+    height: 2000px;
+    background-color: aqua;
+    margin: 50px auto;
+    font-size: 3em;
+
+}
+
+#sect02 {
+    background-color: rgb(59, 187, 89);
+}
+
+
+/* v 110 js btn_up */
+.btn_up {
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/*
+
+/* 
+div {
+   /* v 96  
+    color: aqua;
+    font-size: 10px;
+    font-weight: bold;
+} */
+
+
+/* v 92
+form {
+    display: inline-block; 
+    margin:10px 0px
+}
+form input {
+    width: 100px;
+}
+input[type="submit"] {
+    width: 40px;
+    color: blue;
+    font-size: .3em; 
+    padding: 6px 2px;
+}
+/* v 90 
+div {
+    width: 60%;
+    width: 200px;
+    background-color: aquamarine;
+    margin: 5px;
+    padding:  10px;
+    margin: 10px auto;
+    box-shadow: 0 0 5px 5px rgb(0, 0, 0) , 0 0 5px 1px rgb(255, 0, 0) inset ;
+}
+div h2 {
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1em;
+    border-bottom: 1.2px dashed rgb(255, 0, 0);
+}
+div h2  +p{  
+    text-align: center;
+    font-size: .8em;
+    margin: 5px;
+
+}
+
+
+/* fin de v 90 */
+
+
+/*
 
 .countainer input[type="button"] {
     color: white;
@@ -26,6 +284,9 @@ body {
     
 }
 
+button {
+    padding: 10px 20px;
+}
 
 
 .card {
@@ -33,11 +294,17 @@ body {
     width: 400px;
     text-align: center;
     margin: 10px auto;
-    padding: 20px;
-    
+    padding: 20px; 
 }
 
-
+.list_cla {
+    background-color: red;
+    text-decoration:double;
+    border: 2px dashed green;
+}
+.hiiid {
+    display: none;
+}
 
 
 
