@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+:root {
+    --color-cor-plac: #02fc4c;
+    --color-cor-pplac: #ffa700;
+    --color-no-cc: red;
+}
+
+body {
+    background-image: linear-gradient(45deg, black 50%, gray);
+}
+
+.game {
+    margin: 20px auto;
+    width: 750px;
+    height: max-content;
+}
+
+.game h2 {
+
+    text-align: center;
+    background: rgba(167, 165, 153, 0.38);
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    padding: 20px; 
+    color: bisque;
+}
+
+.area_geme {
+    display: flex;
+}
+
+.key {
+    background-color: #fefefecf;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+}
+
+.titre_key {
+    /*   Global pour letter colors   */
+    background-color: #8a9d8a7d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.key .les_btns {
+    display: inline;
+    margin: 5px 0px;
+}
+
+.key .les_input {
+    display: inline-block;
+    margin: 3px 2px;
+    padding: 2px 5px;
+}
+
+.key .les_btns button {
+    outline: none;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.key .les_btns button:first-child {
+    width: 70%;
+    background-color: #0a19fe;
+    outline: none;
+    border-radius: 4px;
+}
+
+.key .les_btns button:last-child {
+    width: calc(30% - 6px);
+    background-color: #7cff69c4;
+    outline: none;
+    border-radius: 4px;
+    color: black;
+}
+
+.key .les_input span {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.11em;
+}
+
+
+.title_key {
+    padding: 5px;
+}
+
+
+
+
+
+
+.key_one .color_key {
+    background-color: var(--color-cor-plac)
+}
+
+.key_two .color_key {
+    background-color: var(--color-cor-pplac);
+
+}
+
+.key_three .color_key {
+    background-color: var(--color-no-cc);
+}
+
+.titre_key div:first-child {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 10px 10px 10px;
+}
+
+div[class^="key_"] {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 5px auto;
+    width: 90%;
+    background-color: white;
+    padding: 3px;
+    border-radius: 5%;
+}
+
+div[class^="key_"] div:first-child {
+    width: 23px;
+    height: 23px;
+    margin: 1px 2px
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    width: 100%;
+
+}
+
+/* Les Inputs    */
+
+.les_input input[type="text"]:focus {
+    outline: 2px solid gold;
+}
+
+.les_input input[type="text"] {
+    position: relative;
+    border: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0px 5px;
+    caret-color: white;
+}
+
+.les_input input[type="text"]:focus {
+    border: 1px solid blue;
+}
+
+
+.les_input input[type="text"]:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    width: 100%;
+    height: 10px;
+}
+
+
+
+.disabled_input {
+    color: gray;
+    pointer-events: none;
+
+    input {
+        background-color: gray !important;
+        ;
+    }
+}
+
+input.y-in-p {
+    color: white;
+    background-color: var(--color-cor-plac) !important;
+}
+
+input.n-in-p {
+    color: white;
+    background-color: var(--color-cor-pplac) !important;
+}
+
+input.not_ {
+    color: white;
+    background-color: var(--color-no-cc) !important;
+}
+
+
+.mesasge {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px double black;
+    line-height: 100%;
+
+    span {
+        color: orange;
+        font-size: 1.8em;
+    }
+}
+
+
+
+/* MILOU Med */
+
