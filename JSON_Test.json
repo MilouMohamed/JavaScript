@@ -1,0 +1,13 @@
+
+
+{
+    "string":"Eczero",
+    "number":1000,
+    "object" : {
+        "Egy":"Cairo",
+        "Mar":"Kech"
+    },
+    "sckls":["HTML","CSS","JS"],
+    "boolen":true,
+    "nul":"nul"
+}

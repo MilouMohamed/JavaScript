@@ -1,5 +1,786 @@
-// v 167  Modules Import And Export
+// jsonplaceholder.typicode
+let url_API="https://jsonplaceholder.typicode.com/todos";
+
+// v 187 Try Catch And Finaly with Fetch
+console.log("V 187 ");
+console.log("*".repeat(35));
+
+/*
+ async function fetch_data(url){
+
+let myFetc=  await fetch(url);
+  then((res) => 
+{ 
+  if(res) 
+  return res;
+else throw new Error("Pas de Donnes");
+})
+
+}*/
+
+
+//la mieure methode
+async function get_fetch_Data() {
+  console.log("After");
+  try {
+    let myData = await fetch(
+      // "https://api.github.com/users/elzerowebschool/repos"
+      url_API
+    );
+    
+    let res = await myData.json();
+    // sans await retourn Promis // avce  await  reteurn Array
+   
+    console.log(res); res.length = 5;
+   
+    res.forEach((element) => {
+      document.body.innerHTML += `<p>${element.id}</p>`;
+    });
+  } catch (error) { 
+    console.log("Err ===> ", error);
+  } finally {
+    console.log("Befor");
+  }
+}
+
+get_fetch_Data();
+
+/*
+const my_Prom= new Promise((resF,rejF) => {
+  
+  setTimeout(() => {
+    resF('Bonne   CNX');
+    // rejF('Probleme de  CNX');
+  }, 1200);
+
+})
+
+async function get_Data(){
+  console.log("After"); 
+  try {
+    console.log(await my_Prom);
+    
+  } catch (error) {
+    console.log("Err => ",error);
+  } finally{
+    console.log("Befor");
+  }
+}
+
+get_Data();
+// console.log(get_Data()); 
+
+/*
+const myProm= new Promise((reslF,rejeF) => {
+  setTimeout(() => {
+    // reslF('Bonne conneion');
+    rejeF('Movaise conneion');
+  }, 1200);
+})
+
+async function myProm_fnc2() {
+ /* return new Promise((resF, rejF) => {
+    setTimeout(() => {
+      if (false) resF("Bonne CNX");
+      else return rejF("probleme from eject");
+    }, 1200);
+  });
+//  setTimeout(() => {
+    throw new  Error("Probleme cnx ici");
+  return  ("Bonne cnx ici");
+  // return Promise.resolve("Bonne cnx ici");
+// }, 1200);
+
+}
+
+myProm_fnc2().then(
+  (resVal)=> console.log("resVal : "+resVal),
+(rejVal) => console.log("rejVal : "+rejVal) 
+)
+
+console.log(myProm_fnc2());
+/*
+async function readData() {
+  console.log("Befor Promise");
+  try {
+    console.log(await myProm_fnc2());
+  } catch (er) {
+    console.log("catch err : " + er);
+  } finally {
+    console.log("After Promise");
+  }
+}
+
+readData();
+
+// v 186 Await And Training
+// Awiat work inside of async
+// Awiat Make js wiat for The Promise Result
+
+// f1  +  myProm  +  f2  => reslt : f1 f2 myProm => sans async et await
+// f1  +  myProm  +  f2  => reslt : f1myProm  f2 => avec async et await
+/*
+// f1 ----- promise ---f2 avec async et await
+console.log("--------- clg --------");
+const myProm=new Promise((reseF,rejeF) =>  {
+
+  setTimeout(()=>{
+// reseF('Bon Condition');
+  rejeF(Error('Bad Condition'));
+  },2000)
+})
+//---------------------
+
+async function readData(){
+f1();
+
+// await myProm.then((reseVal) => {
+//   console.log(reseVal);
+// })
+// console.log(await myProm);// resolve
+console.log(await myProm.catch((err) => err));// reject
+
+f2(); 
+}
+//---------------------
+function  f1(){
+  console.log("After Prom 1"); 
+}
+
+function f2(){
+console.log("Befor Prom 2");
+}
+
+readData();
+
+
+// v 185 Async And Training
+// si on ajoute async avent la func il return une Promise
+/*
+console.log("v 184 ");
+
+// M3  avec async 
+  async function getData() {
+    let userss = ["Nom 1", "Nom 2"];
+    // userss=[];
+    if (userss.length > 0) 
+    return  "M3 Users Found";
+    else 
+     throw new Error("M3 No Users Found");
+    //Pas return 
+  }
+    console.log("--------");
+console.log(getData()); 
+console.log("--------");
+
+  getData().then(
+    (resVal) => console.log("Bon " + resVal),
+    (rejcVal) => console.log("rejcVal " + rejcVal)
+  );
+  /*
+  // M2  avec  return Promise.reject( 
+  function getData() {
+    let userss = ["Nom 1", "Nom 2"];
+    // userss=[];
+    if (userss.length > 0) return Promise.resolve("M2 Users Found");
+    else return Promise.reject("M2 No Users Found");
+  }
+  
+  getData().then(
+    (resVal) => console.log("resVal " + resVal),
+    (rejcVal) => console.log("rejcVal " + rejcVal)
+  );
+
+/*
+function getData() {
+  let userss = ["Nom 1", "Nom 2"];
+  // userss=[];
+  return new Promise((resF, rejF) => {
+    if (userss.length > 0) resF("Users Found");
+    else rejF(Error("No users found"));
+  });
+}
+
+getData().then(
+  (resVal) => console.log("resVal "+resVal),
+  (rejcVal) => console.log("rejcVal "+rejcVal)
+);
+*/
+
+// v 184 Promise All and All Settled And Race
+/*
+// Promise
+// ----- All
+// ----- All Seteeled
+// ----- Race 
+console.log("object v 184");
+
+// ***********  All  *********
+let prom_01 = new Promise((resF,rejF) => {
+  setTimeout(() => {
+    // resF(" La 1 Promise ");
+    rejF(" La 1 Promise  Probleme");
+  }, 4000);
+})
+
+let prom_02 = new Promise((resF,rejF) => {
+  setTimeout(() => {
+    resF(" La 2 Promise ");
+    // rejF(" La 2 Promise Probleme");
+  }, 2000);
+})
+
+let prom_03 = new Promise((resF,rejF) => {
+  setTimeout(() => {
+    resF(" La 3 Promise ");
+   //  rejF(" La 3 Promise Probleme ");
+  }, 1000);
+})
+
+// retunr resolved
+// Promise.all([prom_01,prom_02,prom_03]).then((resl) => 
+// console.log(resl),
+// (rejeVal) => console.log(rejeVal)).catch((errr) => console.log("object "+errr));
+
+// return all reject and resolve avce infos
+// Promise.allSettled([prom_01,prom_02,prom_03]).then((resl) => 
+// console.log(resl),
+// (rejeVal) => console.log(rejeVal)).catch((errr) => console.log("object "+errr));
+
+//The firste One
+Promise.race([prom_01,prom_02,prom_03]).then((resl) => 
+console.log(resl),
+(rejeVal) => console.log(rejeVal)).catch((errr) => console.log("object "+errr));
+
+setInterval(() => {
+  console.log(1);
+}, 1000);
+
+// v 183 Fetch API
+/*
+console.log("--------------- v 183 ---------------");
+
+fetch("https://api.github.com/users/elzerowebschool/repos")
+  .then((resoult) => {
+    console.log(resoult);
+    let myData = resoult.json();
+   
+    return myData;
+  }) 
+  .then((myDa_ta) => {
+    myDa_ta.length=5;
+    console.log(myDa_ta);
+    return myDa_ta;
+  })
+  
+  .then((myDa_ta) => { 
+  
+    // myDa_ta.forEach((element) => {
+       const ddii = document.createElement("div");
+       ddii.appendChild(document.createTextNode(myDa_ta.message));
+       document.body.appendChild(ddii);
+    // });
+  }).catch((err)  => {
+    console.log(Error(err));
+  }).finally(console.log("finalyyyy"));
+
+// v 182 Promise And XHR
+// Promise And XMLHttpRequest
+/*
+console.log("--------------- v 182 ---------------");
+
+function getData(apiLink) {
+
+  return new Promise((resolvF, rejectF) => { 
+    let myRequest = new XMLHttpRequest();
+    myRequest.onload = function(){
+      if (this.readyState === 4 && this.status === 200) {
+        resolvF(JSON.parse(this.responseText)); 
+         
+      } else {
+        rejectF(Error("Probleme de cnx"));
+      }
+    };
+
+    myRequest.open("GET", apiLink);
+    myRequest.send();
+  });
+}
+
+getData("https://api.github.com/users/elzerowebschool/repos").then((resolVal)=> {
+ resolVal.length=10; 
+return resolVal ; 
+})
+.then((resolVal)=> { 
+  console.log(resolVal); 
+  resolVal.forEach(element => {  
+  let ddiivv=document.createElement("div");
+  ddiivv.appendChild(document.createTextNode(element.name));
+  document.body.appendChild(ddiivv);
+});
+return resolVal;
+},
+(rejecVal) => {
+console.log(Error(' rejecVal => rejecVal'+rejecVal));
+})
+.catch((err) =>   
+  console.log("object") 
+)
+ .finally(console.log("finaaal"))
+
+
+// getData("https://api");
+// getData("https://api.github.com/users/elzerowebschool/repos");
+
+/*
+let myRequest = new XMLHttpRequest();
+
+myRequest.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    let jsDate = JSON.parse(this.responseText);  
+    
+    jsDate.forEach(elem_ => {
+      let div_c = document.createElement("div");
+      div_c.appendChild(document.createTextNode(elem_.name));
+      document.body.appendChild(div_c);  
+    });
+  }
+};
+myRequest.open("GET", "https://api.github.com/users/elzerowebschool/repos");
+myRequest.send();
+
+getData( "https://api.github.com/users/elzerowebschool/repos")
+
+// v 181 Promise Then Catch And Finally
+/*
+let my_prom = new Promise((resolvF, rejectF) => {
+  let empls = ["Mon 1", "Mon 2", "Mon 3", "Mon 4"];
+  // let empls=[];
+
+  if (empls.length === 4) {
+    resolvF(empls);
+  } else {
+    rejectF(Error("Le nbr des Emploiyeurs n est pas  4"));
+    // rejectF("Le nbr des Emploiyeurs n est pas  4");
+  }
+}).then((reseVal) => {
+  reseVal.length=2;
+  console.log(reseVal);
+  return reseVal;
+
+}).then((reseVal) => {
+  reseVal.length=1;
+  console.log(reseVal);
+  return reseVal;
+})
+.then((reseVal) => { 
+  console.log(" Final "+reseVal); 
+  return reseVal;
+}) 
+.catch((rejectedErr)=> {
+  console.log("msg => "+rejectedErr);
+})
+.finally( 
+  console.log("finaly fin ")
+);
+/*
+my_prom.catch((err)=> {
+  console.log("catch ------"+err);
+}).finally(()=> {
+  console.log("finaly ------");
+})
+*/
+
+/*
+let my_prom = new Promise((resolvF, rejectF) => {
+  let empls = ["Mon 1", "Mon 2", "Mon 3", "Mon 4"];
+  // let empls=["Mon 1","Mon 2","Mon 3","Mon 4","Mon 5"];
+
+  if (empls.length === 4) {
+    resolvF(empls);
+  } else {
+    rejectF(Error("Le nbr des Emploiyeurs n est pas  4"));
+  }
+});
+
+my_prom.then((resolVal) => {
+  resolVal.length = 2; 
+  console.log(resolVal);
+  return resolVal;
+});
+
+my_prom.then((resolVal) => {  
+  return resolVal.length=1;
+ });
+  
+
+ my_prom.then((resolVal) => {   
+  console.log("Le nombres des emploiyer ici => "+resolVal);
+ });
+ */
+
+/*
+
+// v 181 Promise Then Catch And Finally
+// console.log("v 181 ");
+/*
+console.log(" 182 ");
+
+let myProm=new Promise((reslvF,rejectF)=> {
+  let cnx=true; 
+  if(cnx) {
+    reslvF("Bonne Connextion");
+  }
+  else {
+    rejectF("Movaise Connextion");
+  } 
+}) 
+
+console.log(myProm);
+
+myProm.then((valReso)=> console.log(` de valReso ${valReso}`),
+(valReject)=> console.log(`de valRej ${valReject}`));
+  
+
+// v 180 Promise Intro Ans Syntax
+/*
+// -- Promise Status
+// ----- Pending :Initial
+// ----- FullFilled :Completed Successfuky
+// ----- Rejected :Failed
+
+// M1 test pas de reject et faullfile
+// const myPromis=new  Promise((resolveFunc,rejectFunc) => {
+//   let cenenct_= false;
+//   if(cenenct_){
+//     resolveFunc("Connection Established");
+//   }else{
+//     rejectFunc(Error("Connection Falide"));
+//   }
+// }).then(
+//   (reseolvValue) => console.log(`Good ${reseolvValue}`),
+//   (rejectValue) => console.log(`Bad ${rejectValue}`)
+//   );
+
+// console.log(myPromis);
+
+// M2 test avce  reject et faullfile
+
+
+
+const myPromis = new Promise((resolveFunc, rejectFunc) => {
+  let cenenct_ = true;
+  cenenct_=false;
+  if (cenenct_) {
+    resolveFunc("Connection Established");//Bon Cnx
+  } else {
+    rejectFunc(Error("Connection Falide"));//Movaise Cnx
+  }
+});
+
+console.log(myPromis);
+// myPromis.then(
+//   (reseolvValue) => console.log(`Good ${reseolvValue}`),
+//   (rejectValue) => console.log(`Bad ${rejectValue}`)
+// )
+
+let reseolvValueV= (valRejReserv)=>console.log(`Good ${valRejReserv}`);
+let rejectValueV=  (valReject)=>console.log(`Bad ${valReject}`);
+
+myPromis.then(reseolvValueV,rejectValueV) ; 
+
+
+
+
+// v 179 Callback Hell Or Pyramid Of Doom
+/*
+console.log("v179");
+
+// 1  ===== Task 1
+// 2  ===== Task 2
+// 3  ===== Task 3
+// 4  ===== Task 4
+
+setTimeout(() => {
+  console.log("task 1");
+  setTimeout(() => {
+    console.log("task 2");
+    setTimeout(() => {
+      console.log("task 3");
+      setTimeout(() => {
+        console.log("task 4");
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
+
+function test() {
+  console.log("object ");
+}
+// setTimeout(test, 2000);
+
+// v 178 Loop On Data
+// Ajax Loop On Data
+/*
+let meyRequest_2=new XMLHttpRequest();
+meyRequest_2.open("GET","https://api.github.com/users/elzerowebschool/repos");
+meyRequest_2.send();
+meyRequest_2.onreadystatechange=function(){
+  // console.log(meyRequest_2.status ," *200*");
+  // console.log(meyRequest_2.readyState ," *4*");
+  if(meyRequest_2.status === 200 && meyRequest_2.readyState ===4)
+  {
+    console.log(meyRequest_2.responseText);
+    let data_res=JSON.parse(meyRequest_2.responseText);
+    // let data_res=JSON.parse(meyRequest_2.response);// meme resultats
+    console.log(data_res);
+    let div_1= document.createElement("div");
+
+    data_res.map((elem) =>  {
+      console.log(elem);
+      console.log(elem.description);
+      console.log(elem.full_name);
+      console.log("***".repeat(20));
+    let p_1= document.createElement("p"), 
+    spn_1= document.createElement("span");
+    p_1.appendChild(document.createTextNode(elem.id));
+    spn_1.appendChild(document.createTextNode(elem.full_name));
+    spn_1.style.border="3px solid green";
+    spn_1.style.display="block";
+    div_1.appendChild(p_1);
+    div_1.appendChild(spn_1);
+
+    }) 
+// for(let ll of data_res)
+// {
+//   console.log(ll.full_name);
+// }
+
+    document.body.appendChild(div_1);
+  }
+}
+
+
+
+// v 177 Whzat AJAX And Network Informztion
+// --- RedyState
+// 0  =>  Request Not Initialized
+// 1  =>  Serveur Connection Established
+// 2  =>  Request Recerved
+// 3  =>  Processing Request
+// 4  =>  Processing Is Finished And Request Is Ready
+// Pour Voir le Changement de ReadyState  onreadystatechange
+/*
+
+
+// --- Status
+// 100 Information
+// 200  =>  responce is Successful
+// 300 Rederection
+// 404  =>  Not found error server
+// 500 Error client
+
+let myRequest_1= new XMLHttpRequest();
+myRequest_1.open("GET","https://api.github.com/users/elzerowebschool/repos");
+myRequest_1.send(); 
+console.log(myRequest_1);// ReadyStatus = 4 et status = 200
+
+// setTimeout(() => { 
+// console.log("readyState "+myRequest_1.readyState);
+// console.log("status "+myRequest_1.status); 
+// let data=JSON.stringify(myRequest_1.responseText); 
+// console.log(data); 
+// }, 2000);
+
+// Pour Voir le Changement de ReadyState  onreadystatechange
+myRequest_1.onreadystatechange = function(){
+  console.log("status "+myRequest_1.status);
+  console.log("readyState "+myRequest_1.readyState);
+  if(this.readyState === 4 && this.status === 200)
+  {
+    console.log(this.responseText);
+    let data_=JSON.parse(this.responseText);
+    console.log(data_[0].id);
+    console.log(data_);
+
+  }
+}
+
+
+
+
+
+
+
+
+
+// let bbttnn=document.querySelector('#dblclick_btn');
+// bbttnn.ondblclick=function(){
+//   console.log("Btn clikc 1");
+//   console.log("Btn clikc 2");
+// }
+
+
+// v 176 Whzat AJAX And Network Informztion
+// AJAX =>  Asynchron JavaScript And XML
+// It Use XMLHttpRequest Object with server
+/*
+
+let req= new XMLHttpRequest();
+console.log(req);
+console.log(req.status);
+
+//   I S R C S     status
+// 1XX ----- infot
+// 2XX ----- Success
+// 3XX ----- Rederection
+// 4XX ----- Client Error
+// 5XX ----- Server Error
+
+console.log(176);
+
+// v 175 Event Loop And Calback Queue 
+/*
+setTimeout(() => {
+  console.log(" V1 "+myv1);
+}, 0);
+let myv1=50;
+myv1+=10;
+
+
+
+setTimeout(() => { 
+test("1100");
+}, 0);
+
+setTimeout(() => {
+  console.log("object");
+}, 0);
+
+function  test( fr){
+  console.log("test func"+myvv+"  fr"+fr);
+}
+
+let myvv=100;
+myvv+=100;
+
+test("test() en final");
+
+// v 174 Call Stack And Web API 
+/*
+// de Web API     Browser
+// Web API Methode Avalable From The Enveonment => Browser
+setTimeout(() => {
+  console.log("From Time oute");
+}, 0);
  
+function one(){  console.log("one");}
+function two(){one();  console.log("two");}
+function three(){ two(); console.log("three");}
+ 
+three();
+console.log(" 1");
+console.log(" 2");
+console.log(" 3");
+console.log(" 4"); 
+console.log("--".repeat(25));
+
+
+
+// v 173 Asyncronisation Vs Synchronisantion
+/*console.log("v 173");
+// Syncroni  Etat1 => Etat2 => Etat3   pas a pas
+// Asyncroni  Etat1  et Etat2 et Etat3 parallel
+
+// Syncroni
+// console.log("1");
+// console.log("2");
+// alert('test Sncroni');
+// console.log("3");
+// console.log("4");
+
+
+// Asyncroni
+console.log("1");
+console.log("2");
+setTimeout(() => { console.log("object SiteTime Out");},2000);
+console.log("3");
+console.log("4");
+
+// v 172    API JSON Parce And Stringfy
+/*
+console.log("vodes 172");
+// JSON.parse           to Js Object
+// JSON.stringify       to JSON
+
+
+let jsonFromServe='{"nom":"Nom 01","age":40}';
+console.log(typeof jsonFromServe);
+console.log(jsonFromServe);
+
+let ObjeFromJson=JSON.parse(jsonFromServe);
+console.log(typeof ObjeFromJson);
+console.log(ObjeFromJson);
+
+ObjeFromJson.nom="Nomm 02";
+ObjeFromJson.age=20;
+ 
+let objToServe=JSON.stringify(ObjeFromJson);
+console.log(typeof objToServe);
+console.log(objToServe);
+
+
+
+// v 171   what is API ?
+//  site pour teste SJON en ligne 
+// https://jsonserve.com/
+
+
+// v 170  JSON  Syntax And Compare With Js Object ?
+// Object Js And JSON
+// Voir le Fichier JSON_Tset.json creation d un object
+
+// v 169  JSON javaScript Object Notation  what is ?
+// JSON VS XML
+  
+
+// v 168 Named VS Default Export  And Import All
+/*console.log("v168");
+//Export Default 
+// import f, {myNum,myNum_2 ,myArr , myArr_2 ,sayTest ,sayTest_2 as st_2} from "./export.js";
+// import f, {myNum_2 ,myArr_2 , sayTest_2 } from "./export.js";
+// f Place de  myFuncDefaul 
+ import * as All_ from './export.js';
+
+
+
+// console.log(myNum_2 );
+// console.log(myArr_2 );
+// console.log(sayTest_2());
+// console.log(st_2());
+// console.log(f());
+
+// console.clear( );
+console.log(All_); 
+// console.log(All_.myArr_2);
+// console.log(All_.sayTest_2());
+console.log(All_.default("rrr"));  // Pour Afficher La fonction export default
+
+
+
+// v 167  Modules Import And Export
+// les deux Fichers Exoprt et Import sont declare dans HTML
+//  Exoprt => export.js
+//  Import => Ce Document doc01.js
+// dans script Ajuter type="module" Les deux fichiers
+/*
+import {myNum,myNum_2 ,myArr , myArr_2 ,sayTest ,sayTest_2 as st_2} from "./export.js";
+
+console.log(myNum , myNum_2);
+console.log(myArr , myArr_2);
+console.log(sayTest());
+console.log(st_2());
+
 
 // v 166   Generator Infinite Nimber function
 /*
@@ -1066,7 +1847,7 @@ console.log(list_);
 // console.log(list_.copyWithin(3));// target index 3 => place de collier || start 0  ||  and 0 
 
 // console.log(list_.copyWithin( 4,-1));//[ 10, 20, 30, 40, "B", "A", "B" ]
-
+ 
 
 // console.log(list_.copyWithin(-6,-2 ));//[ 10,  "A", "B" , 40, 50, "A", "B" ]
 
@@ -1931,7 +2712,7 @@ console.log('************** BOM Test *************');
 /*
 let div_Glob = document.createElement("div");
 div_Glob.className = "div_glob";
-div_Glob.style.cssText="width:100%; ;background-color:#787171 ;position:absolute ;font-family: arial";
+div_Glob.style.cssText="width:100%; background-color:#787171 ;position:absolute ;font-family: arial";
 
 ///////Debut Header ////////////////////////////// 
 let myHeder = document.createElement("div");

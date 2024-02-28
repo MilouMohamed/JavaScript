@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+ box-sizing: border-box;   
+}
+
+body {
+    font-family: Tahoma, Arial;
+    
+}
+.quiz_app {
+    width: 600px;
+    background-color: #cabebe;
+    margin: 20px auto;
+    padding: 10px;
+}
+.quiz_info {
+    display: flex;
+    padding: 20px;
+    background-color: white; 
+   
+}
+
+.quiz_info .quiz_info_categor {
+    flex: 1; 
+}
+ 
+.quiz_area_qust {
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.answer_area {
+    background-color:  white;
+    padding: 5px 20px 20px ;
+}
+
+.answer_area .answer {
+    background-color: #cabebe;
+    padding: 10px ;
+    display: flex;
+}
+.answer_area .answer:not(:first-child) {
+    border-top:  2px solid black;
+}
+
+.answer_area .answer label {
+    padding-left: 10px;
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+    width: 100%;    
+}
+
+.answer_area .answer input[type="radio"]:checked + label {
+    color: blue;
+}
+
+.quiz_app  .bnt_submit {
+    width: 100%;
+    background-color: blue;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    color: white;
+    font-size: 18px; 
+    cursor: pointer;
+    
+    display: block;
+    margin: 20px auto; 
+    
+} 
+
+.quiz_app .bnt_submit:active {
+ color: red;   
+}
+
+.quiz_app .bullets {
+    display: flex;
+    flex-direction: row;
+    background-color: white; 
+    padding: 10px; 
+    
+}
+
+
+.quiz_app .spans  { 
+    display: flex;
+    flex: 1;
+}
+.quiz_app .spans span { 
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background-color: #9ba8d0; 
+    margin-right: 4px;
+}
+
+.quiz_app .spans span.on{  
+    background-color: blue;  
+}
+
+.quiz_app .resultas {
+    padding: 10px 0px; 
+}
+
+.quiz_app .resultas span.bad {
+    font-weight: bold;
+    color: red;
+}
+
+.quiz_app .resultas span.good {
+    font-weight: bold;
+    color: #bd7c04;
+}
+
+.quiz_app .resultas span.perf {
+    font-weight: bold;
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
