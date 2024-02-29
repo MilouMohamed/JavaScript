@@ -13,6 +13,7 @@ window.onload = function () {
   //Set Options
   let curt_Indx = 0;
   let rithAnswersNbr = 0;
+  let nbrOfSecond=4;
 
   // timer
   let timer;
@@ -29,13 +30,13 @@ window.onload = function () {
 
         addQuestData(myReque[curt_Indx], qCount);
 
-        countDown(3, qCount);
+        countDown(nbrOfSecond, qCount);
 
         btn_submt.onclick = () => {
           let repons = document.querySelector("input:checked[name='question']");
           //Timer
           clearInterval(timer);
-          countDown(3, qCount);
+          countDown(nbrOfSecond, qCount);
 
           checkAnswer(
             myReque[curt_Indx]["right_answer"],
