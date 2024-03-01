@@ -50,8 +50,7 @@ body {
  
 
 .snake {
-    background-color: gold;
-    margin: 1px;
+    background-color: gold; 
 }
 .food {
      
