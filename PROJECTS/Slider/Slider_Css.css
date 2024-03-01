@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    color: white;
+}
+body {
+    background-color: #808479;
+}
+.slider-container-all {
+    margin: 10px auto;
+    background-color: black; 
+    padding: 5px;
+}
+
+.slider-container {
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    margin: 2px auto;
+    border: 1px solid white;  
+}
+
+#number-sider {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 6px;
+    width: max-content;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+   transform: scale(5);
+    transition-duration:  1s
+}
+
+.slider-container img.active {
+    z-index: 2; 
+   transform: scale(1);
+    opacity: 1;
+}
+
+.slider-controls {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto ;
+}
+
+
+.slider-controls .next ,
+.slider-controls .prev {
+    background-color: green;
+    padding: 4px 8px ;
+    width: 120px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.slider-controls ul {
+    list-style: none;
+    display: inline-flex; 
+}
+
+.slider-controls ul li {
+    margin:auto 5px  ;
+    padding: 2px 7px;
+    background-color: gray;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+}
+.slider-controls ul li.is-on {
+    background-color: green; 
+}
+    
+
+
+
+
+
+
+
+
+
+/* Milou Med */
