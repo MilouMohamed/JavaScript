@@ -80,7 +80,8 @@ export function isOutOfBordGame() {
 
 function restartGAme() {
   if(confirm("You Lose !!! \nTry ???")) {
-    window.location="/inddex.html";
+  //  window.location="/inddex.html";
+    location.reload();
     snakBody = [{ x: 10, y: 11 }];  
   } 
 }
