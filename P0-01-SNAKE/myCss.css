@@ -38,8 +38,8 @@ body {
     top: 0;
     left: 0; 
     height: 0;
-    width: 0;
-    border: 30vmin solid transparent; 
+    width: 0;;
+    border: 37.5vmin solid transparent; 
     border-left-color: red;
     border-left-style: solid; 
     z-index: -1;
