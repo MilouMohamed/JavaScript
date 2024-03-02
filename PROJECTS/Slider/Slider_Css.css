@@ -33,6 +33,7 @@ body {
     padding: 5px 10px;
     border-radius: 6px;
     width: max-content;
+    z-index: 10;
 }
 
 .slider-container img {
