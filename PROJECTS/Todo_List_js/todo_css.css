@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:  border-box; 
+}
+
+body {
+  background-color: #c8bdbd;;
+  font-family: Arial;
+}
+
+.todo-containet {
+  width: 600px; 
+  margin: 30px auto 0;
+  background-color: #f6f6f6; 
+  
+}
+.todo-containet .add-task {
+  padding: 15px;
+  background-color: green; 
+  position: relative;
+  width: 100%;
+}
+
+.add-task input {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  background-color:  rgba(255,255,255,.3);
+  width: calc(100% - 15px); 
+  color: #FFF;
+  font-size: 20px;
+    height: 45px;
+}
+.add-task input:focus {
+  border: none;
+  outline: none;
+  caret-color: red;
+  
+}
+
+.add-task .plus {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  line-height: 43px;
+  font-size: 38px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  right: 11px;
+  transition:  transform 6s linear ;
+  -webkit-transition: transform 6s linear;
+  -moz-transition: transform 6s linear; 
+  cursor: pointer;
+}
+.add-task .plus:hover {
+  transform: rotate(3600deg) ;
+  -webkit-transform: rotate(3600deg) ;
+  -moz-transform: rotate(3600deg) ;
+}
+
+.todo-containet .task-content  {   
+  padding: 15px;
+  overflow: hidden;
+  background-color: #9d8787;
+}
+
+.todo-containet .task-content > span{  
+  padding: 12px 15px;   
+  background-color: white; 
+  
+}
+.complet-task {
+  text-decoration:line-through;
+}
+
+.todo-containet .task-content .no-task-msg {
+  display: block;
+  color: gray;  
+}
+
+
+.todo-containet .task-content span:not(:last-child) {
+ 
+  margin-bottom:10px; 
+}
+
+.todo-containet .task-content .task-box {
+  display: block;  
+}
+.todo-containet .task-content .task-box .delete {
+  background-color: red;
+  padding: 3px 8px;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer; 
+}
+
+.task-info {
+  width: 600px; 
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.task-info .task-count span ,
+.task-info .div-all-comple-nbr span {
+  background-color: #0000ffa3;
+  padding: 1px 3px ;
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  border-radius: 6px;
+  text-align: center;
+} 
+
+.task-info .div-all-comple-nbr span {
+  background-color: #01ff1178;
+}
+
+
+
+
+
