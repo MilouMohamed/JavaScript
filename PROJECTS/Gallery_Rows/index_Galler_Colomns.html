@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Pesponcive</title>
+  </head>
+  <body>
+    <h1 class="my-text">Responcive Gallery</h1>
+    <div class="contaner-img">
+      <div class="box-img">
+        <img src="imgs/img-1.JPG" alt="img-1" />
+      </div>
+
+      <div class="box-img">
+        <img src="imgs/img-1.JPG" alt="img-1" />
+      </div>
+    </div>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .my-text {
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+        margin: 40px;
+      }
+
+      .contaner-img {
+        margin: 50px auto;
+        padding: 10px;
+        columns: 4;
+        column-gap: 5px;
+        min-width: 280px;
+
+        .box-img {
+          margin: 0 5px 10px;
+
+          img {
+            border-radius: 5px;
+            width: 100%;
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        .contaner-img {
+          columns: 3;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .contaner-img {
+          columns: 2;
+        }
+        .my-text {
+          font-size: 2em;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .contaner-img {
+          columns: 1;
+        }
+        .my-text {
+          font-size: 1.2em;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function () {
+        let contanr_imgs = document.querySelector(".contaner-img");
+
+        let nbr_imgs = 17;
+        contanr_imgs.innerHTML = "";
+        for (let index = 1; index <= nbr_imgs; index++) {
+          let box_img = document.createElement("div");
+          box_img.className = "box-img";
+
+          let img = document.createElement("img");
+          img.src = `imgs/img-${index}.JPG`;
+          img.alt = `img-${index}-gallery`;
+
+          box_img.appendChild(img);
+          contanr_imgs.appendChild(box_img);
+        }
+      };
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Milou MeD -->
