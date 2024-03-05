@@ -121,6 +121,44 @@ body {
 }
 
 
+.buttons {
+  width: 600px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  padding: 10px 15px; 
+}
+
+.buttons button:first-child { 
+  border-bottom-left-radius: 30px;
+}
+
+.buttons button:last-child { 
+  border-bottom-right-radius: 30px;
+}
+
+.mon-h2 {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border-bottom: 5px double  green;
+  width: max-content;
+  position: relative;
+  left: 50%;
+  transform:  translateX(-50%);
+}
 
 
+
+
+
+
+
+
+
+
+/* // Milou Med */
 
