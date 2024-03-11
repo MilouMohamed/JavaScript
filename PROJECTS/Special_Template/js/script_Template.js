@@ -7,7 +7,8 @@ window.onload = () => {
   );
   let spanRandomBG = document.querySelectorAll(".settings-box .random-bg span");
   let skills_div = document.querySelector(".skills");
-
+  let nnn= [{ti:"nom1",ag:55},{ti:"nom2",ag:1055},{ti:"nom3",ag:25}];
+console.table(nnn);
   // Les Options
   let list_Img = [
     "Image0007.jpg",
