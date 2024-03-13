@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Milou Mohamed js php css">
+
+  <title>JS&SCC&AJAX</title>
+
+  <link rel="shortcut icon" href="image-page.PNG" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+    <nav class="my-div-header ">
+      <div class="logo">MILOU MeD</div>
+
+      <ul class="ul-ligne-nav">
+        <li><a href="home">Home</a></li>
+        <li><a href="app">App</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="github">Github</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <div class="contaiber_div">
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="PROJECTS/Quiz-App/index_Quiz_App.html">Quiz App</a>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="PROJECTS/Game_Guess_Word/index.html">Game Guess Word</a>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="PROJECTS/Scrool-Progress/index.html">Scrool Progress Bar</a>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="P0-01-SNAKE/inddex.html">Game Snake</a>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="PROJECTS/Gallery_Rows/index_Galler_Colomns.html">Gallery Rows</a>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="PROJECTS/Special_Template/index_templt.html">Templaite V1</a>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+  </div>
+  <footer class="my-fotr">
+    <p>Créé Par Par Milou Med <span id="my-sp-date"> </span></p>
+  </footer>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 3px;
+
+    }
+
+    /* Header 
+ <nav  my-div-header  
+      <div  logo  
+
+      <ul class="ul-ligne-nav" 
+        <li <a href="home" Home</a </li 
+        <li <a href="app" App</a </li 
+        <li <a href="about" About</a </li 
+        <li <a href="github" Github</a </li 
+      </ul 
+
+    </nav 
+*/
+    header {
+      position: fixed;
+      background-color: rgba(54, 54, 54, 0.884);
+      top: 0;
+      left: 0;
+      width: 100%;
+
+
+      .my-div-header {
+        width: inherit; 
+        display: flex;
+      }
+
+      .logo {
+        flex: 1; 
+        height: 40px;
+        padding: 15px;
+        line-height: 10px;
+      }
+
+      .ul-ligne-nav { 
+        display: flex;
+        list-style: none;
+
+        li {
+          height: 100%;
+          margin-left: 5px;
+
+          a { 
+            height: 100%;
+            margin: 0;
+            text-decoration: none;
+
+            display: inline-block;
+            padding: 15px 8px;
+            line-height: 10px;
+            color: rgb(255, 0, 0);
+
+            /* display:flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+
+            &:hover {
+              background-color: rgb(255, 255, 255);
+              color: rgb(70, 70, 70);
+            } 
+ 
+          }
+        }
+      }
+
+    }
+
+
+    /* Container  */
+    .contaiber_div {
+      padding: 0 20px;
+      padding: 20px;
+      margin-top: 40px;
+
+      hr {
+        padding: 5px;
+        margin: 20px;
+        color: brown;
+        background-color: black;
+      }
+    }
+
+
+
+    /* Footer  */
+    .my-fotr {
+      width: 100%;
+      height: max-content;
+      padding: 10px 0px;
+      margin: 0 auto;
+      background-color: black;
+      color: blanchedalmond;
+
+      p {
+        text-align: center;
+      }
+
+      #my-sp-date {
+        color: aqua;
+
+      }
+    }
+  </style>
+
+
+  <script>
+    let date_span = document.querySelector('#my-sp-date');
+    date_span.innerHTML = new Date().getFullYear(); 
+  </script>
+
+  <!-- MILOU MeD -->
+</body>
+
+</html>
