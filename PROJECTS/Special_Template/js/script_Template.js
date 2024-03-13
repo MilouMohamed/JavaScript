@@ -41,7 +41,7 @@ console.table(nnn);
     }
     myTimerInterval = setInterval(() => {
       let rand_indx = Math.floor(Math.random() * list_Img.length);
-      div_landig_pg.style.backgroundImage = `url("./imgs/image_1920_1080/1920-1080-${list_Img[rand_indx]}")`;
+      div_landig_pg.style.backgroundImage = `url('./imgs/image_1920_1080/1920-1080-${list_Img[rand_indx]}')`;
     }, 1000);
   }
 
