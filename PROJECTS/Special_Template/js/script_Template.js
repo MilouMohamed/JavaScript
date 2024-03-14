@@ -7,8 +7,8 @@ window.onload = () => {
   );
   let spanRandomBG = document.querySelectorAll(".settings-box .random-bg span");
   let skills_div = document.querySelector(".skills");
-  let nnn= [{ti:"nom1",ag:55},{ti:"nom2",ag:1055},{ti:"nom3",ag:25}];
-console.table(nnn);
+  //   let nnn= [{ti:"nom1",ag:55},{ti:"nom2",ag:1055},{ti:"nom3",ag:25}];
+  // console.table(nnn);
   // Les Options
   let list_Img = [
     "Image0007.jpg",
@@ -124,64 +124,66 @@ console.table(nnn);
     }
   };
 
-// create Popup Images
+  // create Popup Images
 
-let lesImages_list=document.querySelectorAll('.gallery .box-img img');
+  let lesImages_list = document.querySelectorAll(".gallery .box-img img");
 
-lesImages_list.forEach(img_ => { 
-img_.addEventListener("click",(e)=>{  
- 
-  let overlay=document.createElement('div');
-  overlay.className="popup-overly";
-  document.body.appendChild(overlay);
+  lesImages_list.forEach((img_) => {
+    img_.addEventListener("click", (e) => {
+      let overlay = document.createElement("div");
+      overlay.className = "popup-overly";
+      document.body.appendChild(overlay);
 
-  let popupBox=document.createElement('div');
-  popupBox.className="popup-box";
+      let popupBox = document.createElement("div");
+      popupBox.className = "popup-box";
 
-   // create title For The Image
-   if(img_.alt) { 
-    let title_img= document.createElement('h3');
-    title_img.appendChild(document.createTextNode(img_.alt));
-    title_img.style.textAlign="center"; 
-    popupBox.appendChild(title_img); 
-  }
-// create Image and add to popup
-  let iimmgg=document.createElement('img');
-  iimmgg.src=img_.src; 
+      // create title For The Image
+      if (img_.alt) {
+        let title_img = document.createElement("h3");
+        title_img.appendChild(document.createTextNode(img_.alt));
+        title_img.style.textAlign = "center";
+        popupBox.appendChild(title_img);
+      }
+      // create Image and add to popup
+      let iimmgg = document.createElement("img");
+      iimmgg.src = img_.src;
 
-  popupBox.appendChild(iimmgg); 
-  document.body.appendChild(popupBox);
+      popupBox.appendChild(iimmgg);
+      document.body.appendChild(popupBox);
 
- 
-  // Create Close Botton
-  let closeBtn= document.createElement("span");
-  closeBtn.className="close-buttton";
-  closeBtn.innerHTML="X";
-  popupBox.appendChild(closeBtn);
+      // Create Close Botton
+      let closeBtn = document.createElement("span");
+      closeBtn.className = "close-buttton";
+      closeBtn.innerHTML = "X";
+      popupBox.appendChild(closeBtn);
 
-  // Click Close Bottom
-  // document.addEventListener('click',(e)=> {
-    document.querySelector(".close-buttton").addEventListener('click',(e)=> {
+      // Click Close Bottom
+      // document.addEventListener('click',(e)=> {
+      document
+        .querySelector(".close-buttton")
+        .addEventListener("click", (e) => {
+          // if(e.target.className ==="close-buttton"){
+          e.target.parentElement.remove();
+          document.querySelector(".popup-overly").remove();
+          // }
+          console.log(e.target);
+        });
+    });
+  });
 
-    // if(e.target.className ==="close-buttton"){
-      e.target.parentElement.remove();
-      document.querySelector(".popup-overly").remove();
-    // }
-console.log(e.target);
+  // Bullets Click and Scroll
+  let bullets_items = document.querySelectorAll(".nav-bullets .bullet");
+  console.log(bullets_items);
 
-  })
+  bullets_items.forEach((blt) => {
 
-})
+    blt.addEventListener("click", (e) => {
 
+      document.querySelector(e.target.dataset.bulet).scrollIntoView({
+        behavior: "smooth"
+      }); 
+      console.log(e.target.dataset.bulet);
+    });
 
-
-
-
-
-
-
-
-});
-
-
+  });
 };

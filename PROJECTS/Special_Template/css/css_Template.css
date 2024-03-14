@@ -190,31 +190,40 @@ ul.colors-list li:nth-child(5) {
 }
 
 .nav-bullets .bullet {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: var( --color-orange);
-    margin: 6px;
+   background-color: var( --color-orange);/* */
+    margin: 15px;
     position: relative;
+    border: 8px dotted black;
+    border: 2px solid black;
 }
 
 .nav-bullets .bullet .tooltip {
     position: absolute;
-    top: 0;
-    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
     background-color: #f6f6f6;
     color: black;
     width: max-content;
     width: 130px;
     font-size: 14px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
+    text-transform: uppercase; 
     padding: 2px;
+    cursor: default;
+    pointer-events: none; 
+    padding: 2px 4px; 
+    display: none;
+    
+}
+.nav-bullets .bullet:hover .tooltip{
+    display:block;
 }
 
-
-.nav-bullets .bullet::before {
+.nav-bullets .bullet  .tooltip::before {
     position: absolute; 
     content: "";
     width: 0;
@@ -222,11 +231,10 @@ ul.colors-list li:nth-child(5) {
     border-color: transparent transparent transparent black;
     border-style: solid;
     border-width: 10px;
-    top: 0px;
-    right: 14px;
-    z-index: 10000; 
-   /* width: 10px;
-    height: 10px;*/
+    top: 50%;
+    transform: translateY(-50%);
+    right: -24px;
+    z-index: 10000;   
 }
 
 
@@ -351,6 +359,7 @@ ul.colors-list li:nth-child(5) {
 .landing-page ul.links li a:hover,
 .landing-page ul.links li.active a {
     border-bottom: 5px solid var(--color-orange);
+    color: var(--color-orange);
     transition: .2s;
 }
 
