@@ -6,7 +6,7 @@
 
 /* Css variables */
 :root {
-    --color-orange: #ff9800;
+    --color-template: #ff9800;
 }
 
 
@@ -21,7 +21,7 @@ body {
 }
 
 .container .title-temp {
-    color: var(--color-orange);
+    color: var(--color-template);
     font-size: 40px;
     font-weight: bold;
     border-bottom: 2px double black;
@@ -34,7 +34,7 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: var(--color-orange);
+    background-color: var(--color-template);
     top: -50%;
     left: -20px;
     border-top-left-radius: 100%;
@@ -192,12 +192,11 @@ ul.colors-list li:nth-child(5) {
 .nav-bullets .bullet {
     width: 15px;
     height: 15px;
-    border-radius: 50%;
-   background-color: var( --color-orange);/* */
+    border-radius: 50%; 
     margin: 15px;
     position: relative;
-    border: 8px dotted black;
-    border: 2px solid black;
+    border: 6px dotted var( --color-template);
+   /* border: 2px solid black;*/
 }
 
 .nav-bullets .bullet .tooltip {
@@ -205,18 +204,18 @@ ul.colors-list li:nth-child(5) {
     top: 50%;
     transform: translateY(-50%);
     right: 30px;
-    background-color: #f6f6f6;
-    color: black;
+    background-color:var( --color-template);;
+    color: white;
     width: max-content;
     width: 130px;
     font-size: 14px;
     letter-spacing: 2px;
-    text-transform: uppercase; 
-    padding: 2px;
+    text-transform: uppercase;  
     cursor: default;
     pointer-events: none; 
-    padding: 2px 4px; 
+    padding: 3px 4px; 
     display: none;
+    line-height: 14px;
     
 }
 .nav-bullets .bullet:hover .tooltip{
@@ -225,15 +224,15 @@ ul.colors-list li:nth-child(5) {
 
 .nav-bullets .bullet  .tooltip::before {
     position: absolute; 
-    content: "";
+    content: ""; 
     width: 0;
     height: 0;
-    border-color: transparent transparent transparent black;
+    border-color: transparent transparent transparent var( --color-template);;
     border-style: solid;
-    border-width: 10px;
+    border-width: 8px;
     top: 50%;
     transform: translateY(-50%);
-    right: -24px;
+    right: -16px;
     z-index: 10000;   
 }
 
@@ -281,7 +280,7 @@ ul.colors-list li:nth-child(5) {
 
 
     color: black;
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     height: 60px;
     margin: 0;
@@ -358,8 +357,8 @@ ul.colors-list li:nth-child(5) {
 
 .landing-page ul.links li a:hover,
 .landing-page ul.links li.active a {
-    border-bottom: 5px solid var(--color-orange);
-    color: var(--color-orange);
+    border-bottom: 5px solid var(--color-template);
+    color: var(--color-template);
     transition: .2s;
 }
 
@@ -384,7 +383,7 @@ ul.colors-list li:nth-child(5) {
 
 
 .landing-page .introduction-text h1 span {
-    color: var(--color-orange);
+    color: var(--color-template);
     transition: .2s;
 }
 
@@ -485,7 +484,7 @@ ul.colors-list li:nth-child(5) {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--color-orange);
+    background-color: var(--color-template);
     width: 0%;
     height: 100%;
     transition: all .3s;
@@ -546,14 +545,14 @@ ul.colors-list li:nth-child(5) {
         font-weight: bold;
         margin: 0 0 15px;
         text-transform: uppercase;
-        color: var(--color-orange);
+        color: var(--color-template);
     }
 
     .close-buttton {
         position: absolute;
         top: -15px;
         right: -15px;
-        background-color: var(--color-orange);
+        background-color: var(--color-template);
         width: 40px;
         height: 40px;
         line-height: 40px;
@@ -631,7 +630,7 @@ ul.colors-list li:nth-child(5) {
 
     .content h3 {
         font-size: 22px;
-        color: var(--color-orange);
+        color: var(--color-template);
     }
 
     .content p {
@@ -648,7 +647,7 @@ ul.colors-list li:nth-child(5) {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: var(--color-orange);
+        background-color: var(--color-template);
         background-color: red;
         border: 3px solid white;
         top: 60px;
@@ -728,7 +727,7 @@ ul.colors-list li:nth-child(5) {
     transform: translate(-50%);
     width: 80%;
     height: 4px;
-    background-color: var(--color-orange);
+    background-color: var(--color-template);
 
 }
 
@@ -765,7 +764,7 @@ ul.colors-list li:nth-child(5) {
 }
 
 .testimonials:after {
-    background-color: var(--color-orange);
+    background-color: var(--color-template);
     right: 0;
 }
 
@@ -791,7 +790,7 @@ ul.colors-list li:nth-child(5) {
 }
 
 .testimonials .tm-box>p {
-    color: var(--color-orange);
+    color: var(--color-template);
     color: #777;
     font-style: italic;
     line-height: 1.3em;
