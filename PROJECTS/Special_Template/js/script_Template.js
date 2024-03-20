@@ -7,6 +7,8 @@ window.onload = () => {
   );
   let spanRandomBG = document.querySelectorAll(".settings-box .random-bg span");
   let skills_div = document.querySelector(".skills");
+  
+let  lesBullets_spn=document.querySelectorAll('.option-box .bullet-bnt span'); 
   //   let nnn= [{ti:"nom1",ag:55},{ti:"nom2",ag:1055},{ti:"nom3",ag:25}];
   // console.table(nnn);
   // Les Options
@@ -18,7 +20,7 @@ window.onload = () => {
     "Image0005.jpg",
   ];
 
-  let color_lctr = localStorage.getItem("setting_box_clr");
+  let color_lctr = localStorage.getItem("color_options");
   if (color_lctr) {
     document.documentElement.style.setProperty("--color-orange", color_lctr);
 
@@ -42,11 +44,11 @@ window.onload = () => {
     myTimerInterval = setInterval(() => {
       let rand_indx = Math.floor(Math.random() * list_Img.length);
       div_landig_pg.style.backgroundImage = `url('./imgs/image_1920_1080/1920-1080-${list_Img[rand_indx]}')`;
-    }, 1000);
+    }, 1500);
   }
 
   //check if bg Random in  Local Storage
-  let bg_lctr = localStorage.getItem("setting_box_bg");
+  let bg_lctr = localStorage.getItem("bg_options");
   if (bg_lctr) {
     spanRandomBG.forEach((el) => {
       el.classList.remove("active");
@@ -67,26 +69,20 @@ window.onload = () => {
         "--color-orange",
         eee.target.dataset.colorLi
       );
-      localStorage.setItem("setting_box_clr", eee.target.dataset.colorLi);
+      localStorage.setItem("color_options", eee.target.dataset.colorLi);
+ 
+      handleClikc(eee); 
 
-      //  lis_elem.querySelectorAll('.active').forEach
-      eee.target.parentElement.querySelectorAll(".active").forEach((ele_li) => {
-        ele_li.classList.remove("active");
-      });
-
-      eee.target.classList.add("active");
     });
   });
 
   //Button Random Bg
   spanRandomBG.forEach((elem) => {
     elem.onclick = (e) => {
-      e.target.parentElement
-        .querySelector(".active")
-        .classList.remove("active");
-      // .forEach((elm) => elm.classList.remove("active"));
-      e.target.classList.add("active");
-      localStorage.setItem("setting_box_bg", e.target.dataset.bg);
+
+      handleClikc(e); 
+
+      localStorage.setItem("bg_options", e.target.dataset.bg);
       random_backGround(e.target.dataset.bg);
     };
   });
@@ -165,25 +161,104 @@ window.onload = () => {
           // if(e.target.className ==="close-buttton"){
           e.target.parentElement.remove();
           document.querySelector(".popup-overly").remove();
-          // }
-          console.log(e.target);
+          // } 
         });
     });
   });
 
   // Bullets Click and Scroll
-  let bullets_items = document.querySelectorAll(".nav-bullets .bullet");
-  console.log(bullets_items);
+  let bullets_items = document.querySelectorAll(".nav-bullets .bullet"); 
+  scrollToSomeWher(bullets_items);
 
-  bullets_items.forEach((blt) => {
+  // NavLiks Click and Scroll
+  let links_items = document.querySelectorAll(".header-area .links a"); 
+  scrollToSomeWher(links_items); 
 
-    blt.addEventListener("click", (e) => {
 
-      document.querySelector(e.target.dataset.bulet).scrollIntoView({
+
+function scrollToSomeWher(elemns) { 
+
+  elemns.forEach((elem) => {
+
+    elem.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector(e.target.dataset.section).scrollIntoView({
         behavior: "smooth"
-      }); 
-      console.log(e.target.dataset.bulet);
+      });  
     });
 
   });
+}
+let cot_blt=bullets_items[0].parentElement;
+
+if(localStorage.getItem('hide-show_options'))
+{  
+  isActiveBtn(); 
+
+  if(localStorage.getItem('hide-show_options')=="true") {
+    cot_blt.style.display="block"; 
+    isActiveBtn("show");
+  }  
+  if(localStorage.getItem('hide-show_options')=="false") {
+    cot_blt.style.display="none"; 
+    isActiveBtn("hide");
+
+  }
+}
+
+function isActiveBtn(nameClass) {
+  
+  lesBullets_spn.forEach(ele=> {
+    ele.classList.remove("active");
+
+    if(ele.dataset.target===nameClass ) {
+      ele.classList.add("active"); 
+    }
+  }) 
+}
+
+
+lesBullets_spn.forEach(elem_spn => {
+  elem_spn.addEventListener('click' ,(e)=>{  
+ 
+
+    if(e.target.dataset.target === "show") {
+      cot_blt.style.display="block";
+      localStorage.setItem('hide-show_options',true);
+    }
+    else  if(e.target.dataset.target === "hide") {
+      cot_blt.style.display="none";
+      localStorage.setItem('hide-show_options',false);
+
+    }
+ 
+handleClikc(e);
+  })
+
+});
+
+
+
+
+function handleClikc(ev) {
+  
+  ev.target.parentElement.querySelectorAll(".active").forEach((ele_li) => {
+        ele_li.classList.remove("active");
+      });
+
+      ev.target.classList.add("active");
+}
+
+
+
+// Button Reset Options 
+document.querySelector('.settings-box .btn-reset-option').onclick=()=>{
+
+console.log("object");
+// localStorage.clear();
+localStorage.removeItem("hide-show_options") ;
+localStorage.removeItem("bg_options") ;
+localStorage.removeItem("color_options") ; 
+window.location.reload();
+}
 };

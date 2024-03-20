@@ -1,14 +1,12 @@
-
-/* Css variables */
-:root {
-    --color-template: #ff9800;
-}
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    caret-color: var(----color-template);
+}
+
+/* Css variables */
+:root {
+    --color-orange: #ff9800;
 }
 
 
@@ -18,13 +16,12 @@ body {
 }
 
 .container {
-    width: 1200px;
-    /* padding: 0 40px;  */
-    margin: 0px auto;
+    width: 100%;
+    padding: 0 40px;
 }
 
 .container .title-temp {
-    color: var(--color-template);
+    color: var(--color-orange);
     font-size: 40px;
     font-weight: bold;
     border-bottom: 2px double black;
@@ -37,7 +34,7 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: var(--color-template);
+    background-color: var(--color-orange);
     top: -50%;
     left: -20px;
     border-top-left-radius: 100%;
@@ -136,8 +133,7 @@ body {
         opacity: 1;
     }
 
-    .random-bg ,
-    .bullet-bnt{
+    .random-bg , .bullet-bnt{
         display: flex;
         justify-content: space-evenly;
 
@@ -157,19 +153,7 @@ body {
             opacity: 1;
         }
     }
-    
 }
-.settings-box   .btn-reset-option {
-        color: white;
-        background-color: #c93f3f;
-        padding: 10px 38px;
-        font-weight: bold;
-        margin: 10px auto;
-        display: block;
-        border-radius: 6px;
-        cursor: pointer;
-        outline: none;
-      }
 
 ul.colors-list li:nth-child(1) {
     background-color: #ff9800;
@@ -209,12 +193,12 @@ ul.colors-list li:nth-child(5) {
 .nav-bullets .bullet {
     width: 15px;
     height: 15px;
-    border-radius: 50%; 
+    border-radius: 50%;
+   background-color: var( --color-orange);/* */
     margin: 15px;
     position: relative;
-    border: 4px dotted var( --color-template);
-   /* border: 2px solid black;*/
-    background-color: black;
+    border: 8px dotted black;
+    border: 2px solid black;
 }
 
 .nav-bullets .bullet .tooltip {
@@ -222,18 +206,18 @@ ul.colors-list li:nth-child(5) {
     top: 50%;
     transform: translateY(-50%);
     right: 30px;
-    background-color:var( --color-template);;
-    color: white;
+    background-color: #f6f6f6;
+    color: black;
     width: max-content;
     width: 130px;
     font-size: 14px;
     letter-spacing: 2px;
-    text-transform: uppercase;  
+    text-transform: uppercase; 
+    padding: 2px;
     cursor: default;
     pointer-events: none; 
-    padding: 3px 4px; 
+    padding: 2px 4px; 
     display: none;
-    line-height: 14px;
     
 }
 .nav-bullets .bullet:hover .tooltip{
@@ -242,15 +226,15 @@ ul.colors-list li:nth-child(5) {
 
 .nav-bullets .bullet  .tooltip::before {
     position: absolute; 
-    content: ""; 
+    content: "";
     width: 0;
     height: 0;
-    border-color: transparent transparent transparent var( --color-template);;
+    border-color: transparent transparent transparent black;
     border-style: solid;
-    border-width: 8px;
+    border-width: 10px;
     top: 50%;
     transform: translateY(-50%);
-    right: -16px;
+    right: -24px;
     z-index: 10000;   
 }
 
@@ -295,13 +279,14 @@ ul.colors-list li:nth-child(5) {
     position: fixed;
     top: 0;
     left: 0;
-    
+
 
     color: black;
-    z-index: 4;
-    width:100%;
-    height: 60px; 
-    padding: 0 10%;
+    z-index: 3;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -374,8 +359,8 @@ ul.colors-list li:nth-child(5) {
 
 .landing-page ul.links li a:hover,
 .landing-page ul.links li.active a {
-    border-bottom: 5px solid var(--color-template);
-    color: var(--color-template);
+    border-bottom: 5px solid var(--color-orange);
+    color: var(--color-orange);
     transition: .2s;
 }
 
@@ -400,7 +385,7 @@ ul.colors-list li:nth-child(5) {
 
 
 .landing-page .introduction-text h1 span {
-    color: var(--color-template);
+    color: var(--color-orange);
     transition: .2s;
 }
 
@@ -501,7 +486,7 @@ ul.colors-list li:nth-child(5) {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--color-template);
+    background-color: var(--color-orange);
     width: 0%;
     height: 100%;
     transition: all .3s;
@@ -562,14 +547,14 @@ ul.colors-list li:nth-child(5) {
         font-weight: bold;
         margin: 0 0 15px;
         text-transform: uppercase;
-        color: var(--color-template);
+        color: var(--color-orange);
     }
 
     .close-buttton {
         position: absolute;
         top: -15px;
         right: -15px;
-        background-color: var(--color-template);
+        background-color: var(--color-orange);
         width: 40px;
         height: 40px;
         line-height: 40px;
@@ -647,7 +632,7 @@ ul.colors-list li:nth-child(5) {
 
     .content h3 {
         font-size: 22px;
-        color: var(--color-template);
+        color: var(--color-orange);
     }
 
     .content p {
@@ -664,7 +649,7 @@ ul.colors-list li:nth-child(5) {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: var(--color-template);
+        background-color: var(--color-orange);
         background-color: red;
         border: 3px solid white;
         top: 60px;
@@ -744,7 +729,7 @@ ul.colors-list li:nth-child(5) {
     transform: translate(-50%);
     width: 80%;
     height: 4px;
-    background-color: var(--color-template);
+    background-color: var(--color-orange);
 
 }
 
@@ -781,7 +766,7 @@ ul.colors-list li:nth-child(5) {
 }
 
 .testimonials:after {
-    background-color: var(--color-template);
+    background-color: var(--color-orange);
     right: 0;
 }
 
@@ -795,7 +780,7 @@ ul.colors-list li:nth-child(5) {
     position: relative;
     color: white;
     background-color: #aaa;
-    /* background-color: #ffg; */
+    background-color: #ffg;
     width: calc((94% ) / 3);
     float: left;
     padding: 15px;
@@ -807,7 +792,7 @@ ul.colors-list li:nth-child(5) {
 }
 
 .testimonials .tm-box>p {
-    color: var(--color-template);
+    color: var(--color-orange);
     color: #777;
     font-style: italic;
     line-height: 1.3em;
@@ -839,163 +824,3 @@ overflow: hidden;
 }
 
 /* End  Testimonials */
-/* Start Contact us */
-
-.contact {
-    width: 100%; 
-    /*! min-width: 700px; */
-    padding-top: 80px;
-    padding-bottom: 80px;
-    position: relative; 
-    background-image: url("../imgs/image_1920_1080/contact\ us.webp");
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .contact .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100% ;
-    background-color: rgba(250,250,250,0.4);
-  }
-  
-  .contact  .container {
-    z-index: 2;  
-    text-align: center; 
-    position: relative;
-    
-    h2 {
-     margin:  30px 0px;
-    }
-  }
-  
-  .contact .container form {  
-   
-    margin: 40px 10%;
-    overflow: hidden; 
-    
-  }
-  
-  .contact .container .left-div {
-    float:left;
-    width: 48%; 
-    
-  }
-  .contact .container .right-div {
-    float:right;
-      width: 48%;  
-    
-  }
-  
-  .contact .container input , 
-   .contact .container textarea {
-    width: 100%;
-    height: 40px;
-     margin: 1px;
-     margin-bottom: 15px;
-    padding:10px; 
-     border: none;
-  }
-  
-  .contact .container textarea {
-    height: 152px; 
-      resize:none;
-  }
-
-.contact .container input:not([type="submit"]):focus , 
-   .contact .container textarea:focus {
-       outline: 2px solid var(--color-orange); 
- background-color: #00000057;
-  color: white;
-       transition: .6s;
-  }
-   
-  .contact .container form input[type="submit"] {
-   background-color:  var(--color-template); 
-    font-weight: bold;
-    line-height: 1.2em;
-    cursor: pointer;
-    color: #FFF;
-      
-  }
-  
-  
- input:not([type="submit"])::-webkit-input-placeholder ,   
-    textarea::-webkit-input-placeholder {   
-  color:  var(--color-template); 
-    
-  }
-   
-  /***********************************/
-  input:not([type="submit"]):focus::-webkit-input-placeholder ,   
-    textarea:focus::-webkit-input-placeholder {   
-    transition: 0.3s;
-    color: transparent;  
-  }
-  
-  input:not([type="submit"]):-moz-placeholder ,
-  textarea:focus:-moz-placeholder   { 
-    transition: 0.3s;
-    color: transparent;
-    
-    
-  } /* FF 4-18 */
-  
-  input:not([type="submit"]):focus::-moz-placeholder ,
-  textarea:focus::-moz-placeholder { 
-    transition: 0.3s;
-    color: transparent;
-  } /* FF 19+ */
-  
-  input:not([type="submit"]):focus:-ms-input-placeholder ,
-  textarea:focus:-ms-input-placeholder  {  
-    transition: 0.3s;
-    color: transparent;
-    
-  } /* IE 10+ */
-    
-  
-   
-/* End Contact us */ 
-/* Start Grid System */ 
-
-@media (min-width:576px) { /*  Phone Landscape  */
-    .container {
-        max-width: 540px;
-            color:red;
-    }
-}
-
-
-@media (min-width:768px) { /*  Tablets  */
-    .container {
-        max-width: 720px;
-            color:yellow;
-    }
-}
-
-
-@media (min-width:992px) { /*  Tablets  */
-    .container {
-        max-width: 960px;
-            color:magenta;
-    }
-}
-
-@media (min-width:1200px) { /*  Tablets  */
-    .container {
-        max-width: 1140px ;
-            color:white;
-    }
-}
-
-
-
-
-/* End Grid System */ 
-
-
-
-

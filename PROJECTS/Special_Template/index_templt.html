@@ -15,10 +15,10 @@
   </head>
   <body>
     <!-- Start settings Box -->
-    <div class="settings-box opennn">
+    <div class="settings-box openn">
       <div class="bedof_i">
         <i class="fa fa-gear my_font_i"></i>
-        <!-- <i class="fa fa-gear fa-spin  " ></i> -->
+        <!-- <i class="fa fa-gear fa-spi n  " ></i> -->
       </div>
 
       <div class="settings-container">
@@ -32,6 +32,7 @@
             <li data-color-li="magenta"></li>
           </ul>
         </div>
+
         <div class="option-box">
           <h4>Background Random</h4>
           <div class="random-bg">
@@ -39,41 +40,50 @@
             <span class="no" data-bg="no">No</span>
           </div>
         </div>
+
+        <div class="option-box">
+          <h4>Show Bullets</h4>
+          <div class="bullet-bnt">
+            <span class="yes active" data-target="show">Yes</span> 
+            <span class="no" data-target="hide">No</span>
+          </div>
+        </div>
+
+        <button class="btn-reset-option">Reset Options</button>
       </div>
-    </div> 
+    </div>
+    
     <!-- End settings Box -->
 
     <!-- Start Bullets -->
     <div class="nav-bullets">
-
-      <div class="bullet" data-bulet=".introduction-text">
-        <div class="tooltip">
-          Home
-        </div>
-      </div>
-      <div class="bullet"  data-bulet=".about-us">
-        <div class="tooltip">
-          About Us
-        </div>
-      </div>
-      <div class="bullet"  data-bulet=".gallery">
-        <div class="tooltip">
-          Gallerys
-        </div>
-      </div>
-      <div class="bullet"  data-bulet=".skills">
-        <div class="tooltip">
-          Skills
-        </div>
-      </div>
-      <div class="bullet"  data-bulet=".testimonials">
-        <div class="tooltip">
-          Commentare
-        </div>
+      <div class="bullet" data-section=".introduction-text">
+        <div class="tooltip">Home</div>
       </div>
 
+      <div class="bullet" data-section=".about-us">
+        <div class="tooltip">About Us</div>
+      </div>
 
+      <div class="bullet" data-section=".skills">
+        <div class="tooltip">Skills</div>
+      </div>
 
+      <div class="bullet" data-section=".gallery">
+        <div class="tooltip">Gallerys</div>
+      </div>
+
+      <div class="bullet" data-section=".timeline">
+        <div class="tooltip">Timeline</div>
+      </div>
+
+      <div class="bullet" data-section=".features">
+        <div class="tooltip">Features</div>
+      </div>
+
+      <div class="bullet" data-section=".testimonials">
+        <div class="tooltip">Testimonials</div>
+      </div>
     </div>
     <!-- End Bullets -->
 
@@ -86,12 +96,15 @@
         <div class="header-area">
           <div class="logo">INCENTIVE HOUSE</div>
           <ul class="links">
-            <li class="active"><a href="#">About</a></li>
-            <li><a href="#"> Skills</a></li>
-            <li><a href="#"> Gallery</a></li>
-            <li><a href="#">Timeline</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Testimonials</a></li>
+            <li class="active">
+              <a href="#" data-section=".introduction-text">Home</a>
+            </li>
+            <li><a href="#" data-section=".about-us">About</a></li>
+            <li><a href="#" data-section=".skills"> Skills</a></li>
+            <li><a href="#" data-section=".gallery"> Gallery</a></li>
+            <li><a href="#" data-section=".timeline">Timeline</a></li>
+            <li><a href="#" data-section=".features">Features</a></li>
+            <li><a href="#" data-section=".testimonials">Testimonials</a></li>
           </ul>
         </div>
       </div>
@@ -390,6 +403,27 @@
       </div>
     </div>
     <!-- End Testimonials -->
+    <!-- Start Contact Us  -->
+    <div class="contact">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2 class="title-temp">Contact Us</h2>
+
+        <form action="#" method="dialog">
+          <div class="left-div">
+            <input type="text" name="user-name" placeholder="Your Name" />
+            <input type="text" name="user-phone" placeholder="Your Phone" />
+            <input type="email" name="user-email" placeholder="Your Email" />
+            <input type="text" name="user-subject" placeholder="Subject" />
+          </div>
+          <div class="right-div">
+            <textarea name="user-msg" placeholder="Your Message"></textarea>
+            <input type="submit" name="user-submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </div>
+      <!-- End Contact Us  -->
     <script src="js/script_Template.js"></script>
   </body>
 </html>
