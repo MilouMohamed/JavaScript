@@ -22,7 +22,7 @@ let  lesBullets_spn=document.querySelectorAll('.option-box .bullet-bnt span');
 
   let color_lctr = localStorage.getItem("color_options");
   if (color_lctr) {
-    document.documentElement.style.setProperty("--color-orange", color_lctr);
+    document.documentElement.style.setProperty("--color-template", color_lctr);
 
     listColors.forEach((elem_li) => {
       elem_li.classList.remove("active");
@@ -66,7 +66,7 @@ let  lesBullets_spn=document.querySelectorAll('.option-box .bullet-bnt span');
   listColors.forEach((lis_elem) => {
     lis_elem.addEventListener("click", (eee) => {
       document.documentElement.style.setProperty(
-        "--color-orange",
+        "--color-template",
         eee.target.dataset.colorLi
       );
       localStorage.setItem("color_options", eee.target.dataset.colorLi);
@@ -261,4 +261,36 @@ localStorage.removeItem("bg_options") ;
 localStorage.removeItem("color_options") ; 
 window.location.reload();
 }
+
+
+
+
+// Menu List 
+//Button Close Open 
+let btn_Menu=document.querySelector('.links-container .toggle-menu');
+let list_Menu=document.querySelector('.links-container .links');
+
+btn_Menu.addEventListener('click' ,(e)=> {
+  
+     e.stopPropagation();
+  list_Menu.classList.toggle("open");
+  btn_Menu.classList.toggle("mymenu");
+})
+
+// click over Menu for Closing
+document.addEventListener('click' ,(e)=>{  
+ 
+  if(e.target !== btn_Menu &&  e.target !== list_Menu )
+  {
+    if(list_Menu.classList.contains("open")) { 
+       list_Menu.classList.remove("open");
+       btn_Menu.classList.remove("mymenu"); 
+    }
+  }
+ 
+});
+
+list_Menu.onclick=(e) => e.stopPropagation();
+
+
 };
