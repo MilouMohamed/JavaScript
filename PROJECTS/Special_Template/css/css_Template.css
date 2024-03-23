@@ -6,8 +6,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    caret-color: var(----color-template);
+    box-sizing: border-box; 
 }
 
 
@@ -64,6 +63,7 @@ body {
     z-index: 9999;
     padding: 5px;
     transition: .5s;
+    border: 1px double black;
 }
 
 .settings-box.open {
@@ -632,11 +632,11 @@ ul.colors-list li:nth-child(5) {
     }
 
     .skills .skill-name:before {
-position: relative; 
-        display: inline-block;  
-       
+        position: relative;
+        display: inline-block;
+
     }
-                    
+
 
 
     .skills .skill-progres {
@@ -741,14 +741,14 @@ position: relative;
         content: "";
         width: 2px;
         height: 100%;
-        background-color: red;
+        background-color: #f00;
         position: absolute;
-        left: 50%;
+        left: calc(50% - 1px);
         top: 0;
     }
 
     .year {
-        margin: 20px auto;
+        /*! margin: 20px auto; */
         width: 50px;
         background-color: red;
         position: relative;
@@ -757,6 +757,8 @@ position: relative;
         color: #FFF;
         padding: 2px 5px;
         font-weight: bold;
+        left: 50%;
+        transform: translateX(-50%)
     }
 
     .left,
@@ -768,6 +770,14 @@ position: relative;
         position: relative;
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+
+    @media (max-width:768px) {
+
+        .left,
+        .right {
+            width: 100%;
+        }
     }
 
     .left {
@@ -838,6 +848,27 @@ position: relative;
         right: -24px;
     }
 
+    @media (max-width:768px) {
+
+        .left:before,
+        .right:before {
+            top: -24px;
+            border-color: transparent transparent rgb(255, 255, 255) transparent;
+            left: calc(50% - 12px);
+        }
+
+        .left::after,
+        .right::after {
+            left: calc(50% - 10px);
+            top: -2px;
+            border-radius: 0;
+            border: none;
+            transform: rotate(45deg);
+        }
+
+
+    }
+
     .clear-div {
         clear: both;
     }
@@ -863,6 +894,24 @@ position: relative;
     text-align: center;
     margin: 30px auto;
 }
+
+@media (max-width:768px) {
+
+    .features .feat-box {
+        width: calc(100%/2);
+        margin: 20px auto;
+    }
+}
+
+@media (max-width:576px) {
+
+    .features .feat-box {
+        width: 100%;
+    }
+
+}
+
+
 
 .features .feat-box img {
     width: 70px;
@@ -939,9 +988,25 @@ position: relative;
     /* background-color: #ffg; */
     width: calc((94%) / 3);
     float: left;
-    padding: 15px;
-
+    padding: 15px; 
 }
+
+
+    @media (max-width: 992px) { 
+    .testimonials .tm-box { 
+        width: calc(94%/ 3); 
+    }
+    }
+
+@media (max-width:768px) { 
+    .testimonials .tm-box {
+        width: 100%; 
+        margin-bottom: 15px;
+    }
+    }
+
+
+
 
 .testimonials .tm-box:not(:last-of-type) {
     margin-right: 3%;
@@ -968,6 +1033,15 @@ position: relative;
         margin-right: 15px;
     }
 
+    @media (max-width: 992px) {
+        img {
+            float: none; 
+        margin-right: 0px;
+        border-radius: 20px;
+
+        }
+    }
+    
 
     h4 {
         color: black;
@@ -978,6 +1052,12 @@ position: relative;
         line-height: 1.6em;
     }
 
+}
+@media (max-width:992px) {
+    
+.testimonials .person-info {
+    text-align: center;
+}
 }
 
 /* End  Testimonials */
@@ -991,8 +1071,7 @@ position: relative;
     position: relative;
     background-image: url("../imgs/image_1920_1080/contact\ us.webp");
     background-position: center;
-    background-size: cover;
-    z-index: -1;
+    background-size: cover; 
 }
 
 .contact .overlay {
@@ -1004,8 +1083,7 @@ position: relative;
     background-color: rgba(250, 250, 250, 0.4);
 }
 
-.contact .container {
-    z-index: 2;
+.contact .container { 
     text-align: center;
     position: relative;
 
@@ -1014,10 +1092,10 @@ position: relative;
     }
 }
 
-.contact .container form {
-
-    margin: 40px 10%;
+.contact .container form { 
     overflow: hidden;
+    margin: auto;
+    max-width: 900px;
 
 }
 
@@ -1032,6 +1110,13 @@ position: relative;
     width: 48%;
 
 }
+@media (max-width:768px) {
+    .contact .container .right-div ,
+    .contact .container .left-div {
+        float: none;
+        width: 100%;
+    }
+}
 
 .contact .container input,
 .contact .container textarea {
@@ -1041,17 +1126,20 @@ position: relative;
     margin-bottom: 15px;
     padding: 10px;
     border: none;
+    background-color: #ffffff82;
+    caret-color: var(--color-template) !important;
 }
 
 .contact .container textarea {
     height: 152px;
     resize: none;
+ 
 }
 
 .contact .container input:not([type="submit"]):focus,
 .contact .container textarea:focus {
     outline: 2px solid var(--color-orange);
-    background-color: #00000057;
+    background-color: #303030;
     color: white;
     transition: .6s;
 }
@@ -1108,6 +1196,16 @@ textarea:focus:-ms-input-placeholder {
 
 
 /* End Contact us */
+/* Start Footer  */
+.fotter_dvi {
+    padding: 15px;
+    text-align: center;
+    background-color: black;
+    font-weight: bold;
+    color: wheat;
+}
+/* End Footer  */
+
 /* Start Grid System */
 
 @media (min-width:576px) {
@@ -1158,3 +1256,5 @@ textarea:focus:-ms-input-placeholder {
 
 
 /* End Grid System */
+
+/* creer par MILOU MeD */

@@ -7,8 +7,10 @@ window.onload = () => {
   );
   let spanRandomBG = document.querySelectorAll(".settings-box .random-bg span");
   let skills_div = document.querySelector(".skills");
-  
-let  lesBullets_spn=document.querySelectorAll('.option-box .bullet-bnt span'); 
+
+  let lesBullets_spn = document.querySelectorAll(
+    ".option-box .bullet-bnt span"
+  );
   //   let nnn= [{ti:"nom1",ag:55},{ti:"nom2",ag:1055},{ti:"nom3",ag:25}];
   // console.table(nnn);
   // Les Options
@@ -70,17 +72,15 @@ let  lesBullets_spn=document.querySelectorAll('.option-box .bullet-bnt span');
         eee.target.dataset.colorLi
       );
       localStorage.setItem("color_options", eee.target.dataset.colorLi);
- 
-      handleClikc(eee); 
 
+      handleClikc(eee);
     });
   });
 
   //Button Random Bg
   spanRandomBG.forEach((elem) => {
     elem.onclick = (e) => {
-
-      handleClikc(e); 
+      handleClikc(e);
 
       localStorage.setItem("bg_options", e.target.dataset.bg);
       random_backGround(e.target.dataset.bg);
@@ -161,136 +161,132 @@ let  lesBullets_spn=document.querySelectorAll('.option-box .bullet-bnt span');
           // if(e.target.className ==="close-buttton"){
           e.target.parentElement.remove();
           document.querySelector(".popup-overly").remove();
-          // } 
+          // }
         });
     });
   });
 
   // Bullets Click and Scroll
-  let bullets_items = document.querySelectorAll(".nav-bullets .bullet"); 
+  let bullets_items = document.querySelectorAll(".nav-bullets .bullet");
   scrollToSomeWher(bullets_items);
 
   // NavLiks Click and Scroll
-  let links_items = document.querySelectorAll(".header-area .links a"); 
-  scrollToSomeWher(links_items); 
+  let links_items = document.querySelectorAll(".header-area .links a");
+  scrollToSomeWher(links_items);
 
+  function removeActiveFromLinks() {
+    links_items.forEach((link) => {  
+      if (link.parentElement.classList.contains("active"))
+        link.parentElement.classList.remove("active");
+    });
+  }
 
+  links_items.forEach((link) => {
+    link.onclick = (e) => {
+      removeActiveFromLinks();
+      e.target.parentElement.className = "active";
+    };
+  });
 
-function scrollToSomeWher(elemns) { 
+  function scrollToSomeWher(elemns) {
+    elemns.forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(e.target.dataset.section).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }
+  let cot_blt = bullets_items[0].parentElement;
 
-  elemns.forEach((elem) => {
+  if (localStorage.getItem("hide-show_options")) {
+    isActiveBtn();
 
-    elem.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.querySelector(e.target.dataset.section).scrollIntoView({
-        behavior: "smooth"
-      });  
+    if (localStorage.getItem("hide-show_options") == "true") {
+      cot_blt.style.display = "block";
+      isActiveBtn("show");
+    }
+    if (localStorage.getItem("hide-show_options") == "false") {
+      cot_blt.style.display = "none";
+      isActiveBtn("hide");
+    }
+  }
+
+  function isActiveBtn(nameClass) {
+    lesBullets_spn.forEach((ele) => {
+      ele.classList.remove("active");
+
+      if (ele.dataset.target === nameClass) {
+        ele.classList.add("active");
+      }
+    });
+  }
+
+  lesBullets_spn.forEach((elem_spn) => {
+    elem_spn.addEventListener("click", (e) => {
+      if (e.target.dataset.target === "show") {
+        cot_blt.style.display = "block";
+        localStorage.setItem("hide-show_options", true);
+      } else if (e.target.dataset.target === "hide") {
+        cot_blt.style.display = "none";
+        localStorage.setItem("hide-show_options", false);
+      }
+
+      handleClikc(e);
+    });
+  });
+
+  function handleClikc(ev) {
+    ev.target.parentElement.querySelectorAll(".active").forEach((ele_li) => {
+      ele_li.classList.remove("active");
     });
 
+    ev.target.classList.add("active");
+  }
+
+  // Button Reset Options
+  document.querySelector(".settings-box .btn-reset-option").onclick = () => {
+    console.log("object");
+    // localStorage.clear();
+    localStorage.removeItem("hide-show_options");
+    localStorage.removeItem("bg_options");
+    localStorage.removeItem("color_options");
+    window.location.reload();
+  };
+
+  // Menu List
+  //Button Close Open
+  let btn_Menu = document.querySelector(".links-container .toggle-menu");
+  let list_Menu = document.querySelector(".links-container .links");
+
+  btn_Menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    list_Menu.classList.toggle("open");
+    btn_Menu.classList.toggle("mymenu");
   });
-}
-let cot_blt=bullets_items[0].parentElement;
 
-if(localStorage.getItem('hide-show_options'))
-{  
-  isActiveBtn(); 
-
-  if(localStorage.getItem('hide-show_options')=="true") {
-    cot_blt.style.display="block"; 
-    isActiveBtn("show");
-  }  
-  if(localStorage.getItem('hide-show_options')=="false") {
-    cot_blt.style.display="none"; 
-    isActiveBtn("hide");
-
-  }
-}
-
-function isActiveBtn(nameClass) {
-  
-  lesBullets_spn.forEach(ele=> {
-    ele.classList.remove("active");
-
-    if(ele.dataset.target===nameClass ) {
-      ele.classList.add("active"); 
+  // click over Menu for Closing
+  document.addEventListener("click", (e) => {
+    if (e.target !== btn_Menu && e.target !== list_Menu) {
+      if (list_Menu.classList.contains("open")) {
+        list_Menu.classList.remove("open");
+        btn_Menu.classList.remove("mymenu");
+      }
     }
-  }) 
-}
+  });
 
-
-lesBullets_spn.forEach(elem_spn => {
-  elem_spn.addEventListener('click' ,(e)=>{  
- 
-
-    if(e.target.dataset.target === "show") {
-      cot_blt.style.display="block";
-      localStorage.setItem('hide-show_options',true);
-    }
-    else  if(e.target.dataset.target === "hide") {
-      cot_blt.style.display="none";
-      localStorage.setItem('hide-show_options',false);
-
-    }
- 
-handleClikc(e);
-  })
-
-});
-
-
-
-
-function handleClikc(ev) {
-  
-  ev.target.parentElement.querySelectorAll(".active").forEach((ele_li) => {
-        ele_li.classList.remove("active");
-      });
-
-      ev.target.classList.add("active");
-}
-
-
-
-// Button Reset Options 
-document.querySelector('.settings-box .btn-reset-option').onclick=()=>{
-
-console.log("object");
-// localStorage.clear();
-localStorage.removeItem("hide-show_options") ;
-localStorage.removeItem("bg_options") ;
-localStorage.removeItem("color_options") ; 
-window.location.reload();
-}
-
-
-
-
-// Menu List 
-//Button Close Open 
-let btn_Menu=document.querySelector('.links-container .toggle-menu');
-let list_Menu=document.querySelector('.links-container .links');
-
-btn_Menu.addEventListener('click' ,(e)=> {
-  
-     e.stopPropagation();
-  list_Menu.classList.toggle("open");
-  btn_Menu.classList.toggle("mymenu");
-})
-
-// click over Menu for Closing
-document.addEventListener('click' ,(e)=>{  
- 
-  if(e.target !== btn_Menu &&  e.target !== list_Menu )
-  {
-    if(list_Menu.classList.contains("open")) { 
-       list_Menu.classList.remove("open");
-       btn_Menu.classList.remove("mymenu"); 
-    }
-  }
- 
-});
-
-list_Menu.onclick=(e) => e.stopPropagation();
-
-
+  list_Menu.onclick = (e) => e.stopPropagation();
 };
+
+
+
+
+
+
+
+
+
+
+
+// crear Par MILOU MeD
