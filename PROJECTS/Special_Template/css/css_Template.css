@@ -281,7 +281,7 @@ ul.colors-list li:nth-child(5) {
 .landing-page {
     min-height: 100vh;
     position: relative;
-    background-image: url("/imgs/image_1920_1080/1920-1080-Image0015.jpg");
+    background-image: url("./imgs/image_1920_1080/1920-1080-Image0015.jpg");
     background-size: cover;
     z-index: 1;
     background-position: center;
