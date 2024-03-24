@@ -1163,6 +1163,12 @@ textarea:focus:-ms-input-placeholder {
   }
 }
 
+@media (max-width: 734px) {
+  
+  .popup-box {
+    padding: 4px
+  }
+}
 /* End Grid System */
 
 /* creer par MILOU MeD */
