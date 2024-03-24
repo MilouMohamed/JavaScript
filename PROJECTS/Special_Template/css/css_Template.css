@@ -647,27 +647,28 @@ ul.colors-list li:nth-child(5) {
 
 /* End  Our Skills  */
 /*********************************************/
+
 /*   Start Gallery*/
 
 .gallery {
     padding-top: 50px;
     padding-bottom: 50px;
-    }
 
-.gallery    .box-img {
+    .box-img {
         text-align: center;
-        }
 
-  .gallery   .box-img    img {
+        img {
             width: 250px;
             padding: 5px;
             border: 2px solid #ccc;
             cursor: pointer;
             background-color: #f6f6f6;
             margin: 5px;
+        }
+    }
 }
 
-.gallery  .popup-overly {
+.popup-overly {
     position: fixed;
     top: 0;
     left: 0;
@@ -677,7 +678,7 @@ ul.colors-list li:nth-child(5) {
     background-color: rgba(1, 1, 1, .7);
 }
 
-.gallery .popup-box {
+.popup-box {
     z-index: 1001;
     padding: 15px;
     background-color: white;
@@ -689,14 +690,13 @@ ul.colors-list li:nth-child(5) {
     -moz-box-shadow: 0 0 12px 5px black;
     -o-box-shadow: 0 0 12px 5px black;
     -ms-box-shadow: 0 0 12px 5px black;
-    }
 
     /*  width: 90%; Pas Bon  */
-.gallery    .popup-box  img {
+    img {
         max-width: 100%;
     }
 
-.gallery   .popup-box   h3 {
+    h3 {
         text-align: center;
         font-weight: bold;
         margin: 0 0 15px;
@@ -704,7 +704,7 @@ ul.colors-list li:nth-child(5) {
         color: var(--color-template);
     }
 
-.gallery   .popup-box   .close-buttton {
+    .close-buttton {
         position: absolute;
         top: -15px;
         right: -15px;
@@ -720,9 +720,10 @@ ul.colors-list li:nth-child(5) {
         cursor: pointer;
 
     }
-
+}
 
 /*   End  Gallery*/
+
 
 
 /* Start Timeline */
