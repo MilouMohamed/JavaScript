@@ -55,6 +55,7 @@ body {
   top: 0;
   left: -200px;
   height: 100vh;
+  height: 100%;
   width: 200px;
   background-color: white;
   z-index: 9999;
