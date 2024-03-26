@@ -1,0 +1,313 @@
+/* @import url('./../FONTS/EduNSWACTFoundation-VariableFont_wght.ttf'); */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    /* * // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700 */
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color--blue: #2169F3;
+    --color--blue-fre: #7dbaec;
+    --transitio-dur: .4s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Start Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 555;
+    width: 100%;
+    -background-image:
+        linear-gradient(0deg, gray 0%, white 45%, gray);
+    background-color: #d9d2d2;
+    color: black;
+    box-shadow: 0 0 10px #ddd;
+    --webkit-box-shadow: 0 0 10px #ddd;
+    --moz-box-shadow: 0 0 10px #ddd;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header .container .logo {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color--blue);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:768px) {
+    .logo {
+        width: 100%;
+        font-size: 16px;
+        height: 40px !important;
+        margin-bottom: 5px;
+
+    }
+
+    .header .container .my-menu {
+        width: 100%;
+    }
+}
+
+
+.header .container .my-menu ul {
+    display: flex;
+}
+
+.header .container li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    height: 60px;
+    padding: 0 25px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transitio-dur);
+}
+
+@media (max-width:767px) {
+    .header .container li {
+        margin: auto;
+        height: 40px;
+    }
+
+    .header .container li>a {
+        margin: auto;
+        font-size: 16px;
+        height: inherit;
+        padding: 0 10px;
+    }
+
+    .header
+}
+
+.header .container li>a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color--blue);
+    transition: var(--transitio-dur);
+}
+
+.header .container li>a:hover {
+    background-color: rgba(7, 32, 194, 0.235);
+    color: var(--color--blue);
+}
+
+.header .container li>a:hover::before {
+    left: 0%;
+}
+
+
+
+
+/* End Header */
+
+
+
+/* Start Medai Query */
+@media (min-width:767px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+@media (min-width:991px) {
+    .container {
+        width: 970px;
+
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+
+    }
+}
+
+/* End Medai Query */
+
+/*  Start LandingPage  */
+
+.landing-page {
+    margin: 50px auto;
+    position: relative;
+}
+
+.landing-page::after {
+    /*   position: absolute;
+    top:   80% ;
+    left: -20%;
+    content: ""; 
+    width: 140%;
+    height: 130px;
+    background-color: gray; 
+    transform: rotate(-5deg);
+    z-index: -1;
+    */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #c4bbbb;
+
+    top: 0;
+    left: 0;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+    z-index: -1;
+}
+
+@media (max-width:991px) {
+
+    .landing-page::after {
+        height: calc(90vh - 60px);
+    }
+}
+
+.landing-page .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px);
+    padding-bottom: 120px;
+}
+
+
+.landing-page .container .text_ {
+    flex-direction: column;
+}
+
+.landing-page .text_ h1 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.landing-page .text_ p {
+    line-height: 1.4em;
+    font-size: 22px;
+    margin: 6px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+
+
+@media (max-width:991px) {
+
+
+    .landing-page .container {
+        flex-direction: row;
+    }
+
+    .landing-page .text_ {
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .landing-page .text_ h1 {
+        font-size: 24px;
+    }
+
+    .landing-page .text_ p {
+        font-size: 19px;
+    }
+
+}
+
+.landing-page .container .image_ {
+    flex: 1;
+}
+
+@media (max-width:991px) {
+    .landing-page .container .image_ {
+        display: none;
+    }
+}
+
+.landing-page .image_ img {
+    width: 600px; 
+    position: relative;
+    animation:  up-down 3s linear infinite;
+}
+
+@keyframes  up-down {
+    0%,100% {
+        top: 0px;
+    } 
+    50% {
+        top: 30px;
+    } 
+    
+}
+
+
+.landing-page .down-bottm {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--transitio-dur);
+}
+
+@media (max-width:991px) {
+
+    .landing-page .down-bottm {
+        bottom: 8%;
+    }
+}
+
+.landing-page .down-bottm:hover {
+    color: var(--color--blue-fre);
+}
+
+.landing-page i {
+    font-size: 35px;
+}
+
+
+
+/*  End LandingPage  */
