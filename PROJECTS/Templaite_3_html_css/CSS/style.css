@@ -1,4 +1,4 @@
-/* @import url('./../FONTS/EduNSWACTFoundation-VariableFont_wght.ttf'); */
+ @import url('./../FONTS/EduNSWACTFoundation-VariableFont_wght.ttf'); 
 
 
 * {
@@ -11,7 +11,7 @@
     -o-box-sizing: border-box;
     /* * // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 400 to 700 */
-    font-family: "Edu NSW ACT Foundation", cursive;
+    font-family: "Edu NSW ACT Foundation","Cairo",sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -36,6 +36,7 @@ html {
 .main-title {
     color: balck;
     font-size: 30px;
+    font-weight: 700;
     text-transform: uppercase; 
         border: 3px solid black;
     margin: 10px auto 40px  ;
@@ -44,7 +45,7 @@ html {
     position: relative;
     cursor: pointer;
     z-index: 1;
-    transition-delay:   .1s; 
+    transition-delay:   .1s;  
     
 }
 .main-title::before , .main-title::after {
@@ -165,6 +166,12 @@ border-color: white;
         margin-bottom: 5px;
 
     }
+    
+.container { 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
     .header .container .main-nav {
         width: 100%;   
@@ -177,28 +184,25 @@ border-color: white;
 
 .header .container .main-nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center; 
 }
-
+ 
 .header .container .main-nav>li>a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     color: black; 
-     padding: 20px 10px; 
+     padding: 20px 5px; 
     position: relative;
     overflow: hidden; 
     transition: var(--transitio-dur); 
 }
 
 @media (max-width:767px) {
-    .header .container li {
-        margin: auto; 
-    padding:   10px; 
-
-    }
-
+     
     .header .container .main-nav > ul > li>a {
         margin: auto;
         font-size: 21px;
@@ -243,7 +247,7 @@ border-color: white;
 .header .mega-menu {
     position: absolute; 
     width: 100%;
-    min-width: 430px;
+    min-width: 300px;
     max-width: 1140px;
     left: 50%;
     transform: translateX(-50%);
@@ -743,7 +747,7 @@ transform:  scale(1.5)   rotate(18deg)  ;
 .features .my-img:after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right:  0;
     border-color: transparent transparent white transparent;
     border-width: 0px 0px 100px 700px;
@@ -755,10 +759,10 @@ transform:  scale(1.5)   rotate(18deg)  ;
 {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right:  0;
-    width: 100%;
-    height: 100%;  
+    width: 100%; 
+    height: 100%;
 }
 .features .quality .my-img:before { 
     background-color: rgba(255,0,0,.4);  
@@ -779,6 +783,7 @@ transform:  scale(1.5)   rotate(18deg)  ;
 }
 .features img {
     max-width: 100%;
+    /*! height: 100%; */
 }
 
 .features .info {
@@ -883,10 +888,95 @@ transform:  scale(1.5)   rotate(18deg)  ;
 .features .box-ftrs:hover a {
     color: white;
 }
-
-
-
+ 
 /*  End  Features  */
+/*  Start  Testimonials  */
+.testimonials {
+    background-color: var(--section-bg);
+  margin: auto;
+  padding-top: var(--main-padding-t);
+  padding-bottom: var(--main-padding-b);
+}
+
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+   grid-gap: 30px ; 
+    margin-top: 80px; 
+}
+
+
+.testimonials .box-tm {
+    background-color: white;
+    position: relative; 
+    border-top-left-radius: 100px 50px; 
+    border-bottom-left-radius: 50px 10px; 
+    padding: 15px 0px 15px 25px;
+}
+
+.testimonials .box-tm img {
+    border-radius: 50%;
+    width: 100px;
+    border: 10px solid  var(--section-bg);
+    position: absolute;
+    top: -20px;
+    right:   -8px; 
+}
+
+.testimonials h3 {
+    color: black;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.testimonials  .staks  {  
+    color: var(--color--blue-fre);
+    margin: 10px 0px 5px;
+    display: block;
+}
+
+
+
+.testimonials p{
+    line-height: 1.3;
+    color: #777; 
+    margin: 12px 0px; 
+}
+.testimonials .rate i.icc{
+    color: gold !important;
+}
+
+.testimonials .rate i.iccn{
+    color: black !important;
+}
+ 
+
+/*  End  Testimonials  */
+/*  Start   Team  */
+ 
+
+.team {
+    background-color: white;
+  margin: auto;
+  padding-top: var(--main-padding-t);
+  padding-bottom: var(--main-padding-b);
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+   grid-gap: 30px ; 
+    margin-top: 80px; 
+}
+
+.team img {
+    width: 120px;
+}
+
+
+
+
+/*  End   Team  */
 
 
 
