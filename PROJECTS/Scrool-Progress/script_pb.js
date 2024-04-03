@@ -17,11 +17,11 @@ document.addEventListener("scroll", () => {
   let my_prog_2 = document.querySelector(".my_prog_2");
 
   // Div 1
-  my_prog.style.backgroundImage = ` linear-gradient(45deg,black ${scrol_Top}% , white ${scrol_Top}%) `;
-  my_prog.style.backgroundImage = ` -webkit-linear-gradient(45deg,black ${scrol_Top}% , white ${scrol_Top}%) `;
-  my_prog.style.backgroundImage = `-moz-linear-gradient(45deg,black ${scrol_Top}% , white ${scrol_Top}%) `;
-  my_prog.style.backgroundImage = `-o-linear-gradient(45deg,black ${scrol_Top}% , white ${scrol_Top}%) `;
-  my_prog.style.backgroundImage = `-ms-linear-gradient(45deg,black ${scrol_Top}% , white ${scrol_Top}%) `;
+  my_prog.style.backgroundImage = ` linear-gradient(45deg,green ${scrol_Top}% , red ${scrol_Top}%) `;
+  my_prog.style.backgroundImage = ` -webkit-linear-gradient(45deg,green ${scrol_Top}% , red ${scrol_Top}%) `;
+  my_prog.style.backgroundImage = `-moz-linear-gradient(45deg,green ${scrol_Top}% , red ${scrol_Top}%) `;
+  my_prog.style.backgroundImage = `-o-linear-gradient(45deg,green ${scrol_Top}% , red ${scrol_Top}%) `;
+  my_prog.style.backgroundImage = `-ms-linear-gradient(45deg,green ${scrol_Top}% , red ${scrol_Top}%) `;
  
 
  
