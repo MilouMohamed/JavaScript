@@ -277,6 +277,7 @@ window.onload = () => {
   });
 
   list_Menu.onclick = (e) => e.stopPropagation();
+   random_backGround("yes");
 };
 
 
