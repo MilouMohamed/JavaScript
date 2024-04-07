@@ -660,7 +660,7 @@ ul.colors-list li:nth-child(5) {
   /*  width: 90%; Pas Bon  */
   .popup-box img {  
       width:90vw;
-  height: 90vh;
+  height: 85vh;
       object-fit:contain; 
   }
 
