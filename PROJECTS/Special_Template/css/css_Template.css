@@ -649,11 +649,19 @@ ul.colors-list li:nth-child(5) {
   -moz-box-shadow: 0 0 12px 5px black;
   -o-box-shadow: 0 0 12px 5px black;
   -ms-box-shadow: 0 0 12px 5px black;
+  max-width:95%; 
+  max-height: 95%; 
+  height:max-content;
+  width: max-content; 
 }
 
   /*  width: 90%; Pas Bon  */
   .popup-box img {
-    max-width: 100%;
+    max-width:inherit;
+    max-height: inherit;  
+    max-width:calc(100% - 30px); 
+    max-height:calc(100% - 30px);  
+    margin: auto;
   }
 
   .popup-box h3 {
