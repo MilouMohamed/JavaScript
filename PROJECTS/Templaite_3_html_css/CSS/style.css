@@ -1,5 +1,5 @@
  /* @import url('./../FONTS/EduNSWACTFoundation-VariableFont_wght.ttf'); */
-
+ /*       V2       */
 
  * {
      margin: 0;
@@ -442,7 +442,9 @@
  .landing-page {
      margin: 60px auto;
      position: relative; 
-     width: 100%;
+     width: 100%; 
+    height: calc(100% - 60px);
+ 
  }
 
  .landing-page::after {
