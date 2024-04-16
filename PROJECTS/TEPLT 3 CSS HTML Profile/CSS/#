@@ -135,34 +135,34 @@ ul li a.active ,
 .page .conten .header input { 
     border-radius: 5px;  
     padding-left: 30px;
+   
     border: 1px solid var( --color-grey-ccc);
-   width: 140px;
-    transition: 1s;
+     width: 150px; 
+    transition: width .3s;
 }
 .page .conten .header input:hover {
- width:250px;
+    border: 1px solid blue;
 }
-.page .conten .header input:focus::placeholder { 
-  color : var(--color-blue);
+.page .conten .header input:focus::placeholder {
+    color: blue; 
+    width: 200px; 
 }
 
  
-
-.page .conten .header .icons-img span {  
-    position: relative; 
+.page .conten .header .icons-img i {  
+    position: relative;
+    background-color: red
 }
  
-.page .conten .header  .icons-img span:before { 
+.page .conten .header  .icons-img i :before { 
    content: "🔍";
    content: "";
     position: absolute;
     top: 0;
-    right: -4px;
-    width: 7px;
-    height: 7px;
-    background-color:var(--color-red) ; 
-    border-radius: 50%;
-    
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: green; 
 }
 
 

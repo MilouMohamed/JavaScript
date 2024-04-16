@@ -1,3 +1,16 @@
+:root {
+    --color-blue:#0075ff;
+    --color-blue-alt:#0d69d5;
+    --color-orange:#f59e0b;
+    --color-green:#22c55e; 
+    --color-red:#f44336; 
+    --color-grey:#888;   
+    
+    --color-grey-ccc:#ccc; 
+}
+
+
+
 /* Start PAdding et margin */
 
 
@@ -9,17 +22,23 @@
 }
 .mt-20 {
     margin-top: 20px;
-}
+} 
 .p-20 {
     padding: 20px;
 }
 .pt-0 {
     padding-top: 0px;
 }
+.p-5 {
+    padding: 5px;
+} 
 .p-10 {
     padding: 10px;
-}
- 
+} 
+
+.p-15 {
+    padding: 15px;
+} 
 
 .pt-20 {
     padding-top: 20px;
@@ -63,6 +82,16 @@
     position: absolute;
  }
  
+ .w-full {
+    width:100% ;
+    background-color: red;
+ }
+
+ .justify-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
  
  /*End   Bposition   */ 
  /* Start FONT   */ 
