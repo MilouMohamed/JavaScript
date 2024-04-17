@@ -4,12 +4,13 @@
     --color-orange:#f59e0b;
     --color-green:#22c55e; 
     --color-red:#f44336; 
-    --color-grey:#888;   
-    
+    --color-grey:#888;    
     --color-grey-ccc:#ccc; 
 }
 
-
+/*  
+c-green mt-5 
+*/
 
 /* Start PAdding et margin */
 
@@ -20,8 +21,17 @@
 .m-20 {
     margin: 20px;
 }
+.mt-5 {
+    margin-top: 5px;
+} 
+.mt-10 {
+    margin-top: 10px;
+} 
 .mt-20 {
     margin-top: 20px;
+} 
+.mb-20  {
+    margin-bottom: 20px;
 } 
 .p-20 {
     padding: 20px;
@@ -46,6 +56,18 @@
 .rad-6 {
     border-radius: 6px;
 }
+.rad-10 {
+    border-radius: 10px;
+}
+.mx-w-100 {
+    max-width: 100%;
+}
+.mx-w-200px {
+    max-width: 200px;
+}
+.mx-w-80px {
+    max-width: 80px;
+}
 /* End PAdding et margin */
 /* Start  color et Backgroung color */
 
@@ -54,6 +76,9 @@
 } 
 .bg-eee {
     background-color: #eee;
+}
+.bg-blue {
+    background-color: var(--color-blue);
 } 
 .c-white {
     color: white;
@@ -61,17 +86,41 @@
 .c-black {
     color: black;
 } 
+.c-green {
+    color: var(--color-green);
+}
+.c-grey {
+    color: var(--color-grey);
+}
 
 /* End  color et Backgroung color */ 
  /*Start   Box   */
 .d-flex {
     display: flex;
 }
+.d-grid {
+    display: grid;
+}
+.gap-20 {
+gap: 20px;
+}
 
 .align-center {
    align-items: center;
 }
- 
+.space-between {
+    justify-content: space-between;
+}
+.d-block { 
+    display: block;
+}
+
+@media (max-width:767px) {
+    .d-block-mobile {
+        display: block;
+    }
+} 
+
  /*End   Box   */ 
  /*Start   Bposition   */ 
 
@@ -83,8 +132,7 @@
  }
  
  .w-full {
-    width:100% ;
-    background-color: red;
+    width:100% ; 
  }
 
  .justify-center {
@@ -97,6 +145,14 @@
  /* Start FONT   */ 
  .txt-c{ 
     text-align: center;
+ }
+ .txt-right{ 
+    text-align: right;
+ }
+ @media (max-width:767px) {
+    .txt-c-mobile {
+    text-align: center; 
+    }
  }
  .fs-14 {
     font-size: 14px;

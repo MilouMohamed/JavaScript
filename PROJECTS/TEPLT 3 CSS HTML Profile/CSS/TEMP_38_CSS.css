@@ -22,8 +22,23 @@ body {
 *:focus {
     outline: none;
 }
+
+::-webkit-scrollbar {/* All */
+    width: 15px;
+}
+::-webkit-scrollbar-track {/* traject */
+    background-color: white;
+}
+::-webkit-scrollbar-thumb { /* serpone */
+    background-color: var(--color-blue);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-blue-alt);
+}
+
+
 .page {
-    min-height: 100vh;
+    min-height: 100vh;  
 }
 .page .sidebar  {
     width: 170px;
@@ -172,8 +187,56 @@ ul li a.active ,
     width: 30px;
     border-radius: 50%;
 }
+/* end head  */
+
+.page h1 {
+    color: white;
+    margin:  20px 20px 40px;
+    
+}
+
+.page h1:before,
+.page h1:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+}
 
 
+.page h1:before {
+    width: 170px;
+    background-color: white;
+} 
+
+.page h1:after {
+    width: 40px;
+    background-color: black; 
+}
+
+.page .wrapper {
+    grid-template-columns: repeat(auto-fill ,minmax(450px,1fr));
+      margin-left: 20px;
+    margin-right:  20px; 
+}
+
+@media (max-width:767px) { 
+.page .wrapper {
+    grid-template-columns: repeat(auto-fill ,minmax(200px,1fr));
+      margin-left: 10px;
+    margin-right:  10px; 
+    gap: 10px;
+}
+
+}
+
+
+.page .wrapper .body img {
+    border-radius: 50%;
+    top: -70px;
+        
+}
 
 
 /* End Contents */
