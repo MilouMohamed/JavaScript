@@ -117,22 +117,22 @@
         <!--End  header -->
         <h1 class="p-relative">Dashboard</h1>
         <div class="wrapper gap-20 d-grid">
-
+          <!-- Start Welcom -->
           <div class="welcome bg-white txt-c-mobile d-block-mobile rad-10">
-            <div class="intro p-20 d-flex space-between bg-eee">
+            <div class="intro p-20 d-flex space-between bg-eee rad-10">
               <div>
                 <h2 class="m-0">Weolcome</h2>
                 <p class="c-grey mt-5">MILOU</p>
               </div>
               <img
-                class="mx-w-200px"
+                class="mx-w-200px hide-in-mobile"
                 src="IMG/work-steps-3.png"
                 alt="work MILOU"
               />
             </div>
 
             <div
-              class="body d-flex mt-20 mb-20 p-20 txt-c black-mobile p-relative"
+              class="body d-flex mt-40 mb-20 p-20 txt-c d-block-mobile black-mobile p-relative"
             >
               <div>
                 MILOU MeD
@@ -149,13 +149,173 @@
               <img
                 src="./IMG/avatar-02.png"
                 alt="avatar"
-                class="p-absolut mx-w-80px"
+                class="avatar p-absolut mx-w-80px center-in-mobile"
               />
             </div>
 
-              <a href="profile.html" class="visit bg-blue d-block fs-14 rad-6 txt-right ">Profile</a>
+            <a
+              href="profile.html"
+              class="visit bg-blue d-block txt-c w-fit c-white btn-shape f-left"
+              >Profile</a
+            >
           </div>
+          <!-- End Welcom -->
+          <!-- Start Quick Draft Widget -->
+          <div class="quick-draft bg-white p-20 rad-10 d-block-mobile">
+            <h2 class="mt-0">Quick Draft</h2>
+            <p class="c-grey mt-5 mb-20">Write A draft For Your Ideas</p>
+            <form>
+              <input
+                type="text"
+                class="w-full p-10 bg-eee rad-6 mt-10 n-border"
+                placeholder="Title"
+              />
+              <textarea
+                class="w-full p-10 bg-eee rad-6 mt-10 n-border mb-20"
+                placeholder="Your Thought"
+              ></textarea>
+            </form>
+            <input type="submit" value="Save" class="w-fit btn-shape" />
+          </div>
+          <!-- End Quick Draft Widget -->
+          <!-- Start Targets -->
+          <div class="targets bg-white p-20 d-block-mobile rad-10">
+            <h2 class="mt-0">Yearly Targets</h2>
+            <p class="c-grey mt-5 mb-20">Yearly Targets</p>
+            <div class="grid-targ d-flex">
+              <div class="row d-block w-full">
+                <div class="carre-trg center-flex">
+                  <i class="fa-solid fa-bitcoin-sign"></i>
+                </div>
+                <div class="info-trg">
+                  <p>Money</p>
+                  <span class="mt-10 d-block fw-bold">$20.000</span>
+                  <div class="progres-trg">
+                    <div class="prog-val" data-prog="80%"></div>
+                  </div>
+                </div>
+              </div>
 
+              <div class="row">
+                <div class="carre-trg center-flex">
+                  <i class="fa-solid fa-code"></i>
+                  <!-- <i class="fa-solid fa-users-between-lines"></i> -->
+                </div>
+                <div class="info-trg">
+                  <p>Projects</p>
+                  <span class="mt-10 d-block">24</span>
+                  <div class="progres-trg">
+                    <div class="prog-val" data-prog="50%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="carre-trg center-flex">
+                  <i class="fa-solid fa-users-between-lines"></i>
+                </div>
+                <div class="info-trg">
+                  <p>Team</p>
+                  <span class="mt-10 d-block">16</span>
+                  <div class="progres-trg">
+                    <div class="prog-val" data-prog="70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Targets -->
+
+          <!-- Start tickets -->
+          <div class="statics bg-white p-20 d-block-mobile rad-10">
+            <h2 class="mt-0">tickets Statics</h2>
+            <p class="c-grey mt-5 mb-20">Everything About Support Tickets</p>
+            <div class="justify-center d-flex f-wrap gap-20">
+              <div class="box-tits p-20 txt-c brdr-sold-1-ccc">
+                <i class="fa-regular fa-rectangle-list fa-2x d-block mb-20"></i>
+                <span class="fw-bold fs-20 d-block mb-5">2500</span>
+                Total
+              </div>
+
+              <div class="box-tits p-20 txt-c brdr-sold-1-ccc">
+                <i class="fa-solid fa-spinner fa-2x d-block mb-20"></i>
+                <span class="fw-bold fs-20 d-block mb-5">2500</span>
+                Total
+              </div>
+
+              <div class="box-tits p-20 txt-c brdr-sold-1-ccc">
+                <i class="fa-regular fa-circle-check fa-2x d-block mb-20"></i>
+                <span class="fw-bold fs-20 d-block mb-5">2500</span>
+                Total
+              </div>
+
+              <div class="box-tits p-20 txt-c brdr-sold-1-ccc">
+                <i class="fa-brands fa-delicious fa-2x d-block mb-20"></i>
+                <span class="fw-bold fs-20 d-block mb-5">2500</span>
+                Total
+              </div>
+            </div>
+          </div>
+          <!-- End tickets -->
+          <!-- Start Letest News -->
+          <div class="letest-news p-20 rad-6 bg-white d-block-mobile">
+            <h2 class="mt-0 mb-20">Letest News</h2> 
+
+
+            <div class="row-l-n d-flex align-center">
+              <img class="rad-6 " src="IMG/1920-1080-Image0001.jpg" alt="team " />
+              <div class="lttr-nws-info d-block">
+                <h3 class="fw-bold fs-14 mb-5">Create SASS Section</h3>
+                <span class="c-grey fs-13 m-0">New SASS Exemples & Tutorials</span>
+              </div>
+              <div class="label fs-14 w-fit rad-6 btn-shape bg-eee    c-black">
+                5 Days Ago
+              </div>
+            </div>
+
+
+            <div class="row-l-n d-flex align-center">
+              <img class="rad-6 " src="IMG/1920-1080-Image0002.jpg" alt="team " />
+              <div class="lttr-nws-info d-block">
+                <h3 class="fw-bold fs-14 mb-5">Create SASS Section</h3>
+                <span class="c-grey fs-13 m-0">Team Increased</span>
+              </div>
+              <div class="label mt-10 fs-14 w-fit rad-6 btn-shape bg-eee    c-black">
+                4 Days Ago
+              </div>
+            </div>
+
+
+            <div class="row-l-n d-flex align-center">
+              <img class="rad-6 " src="IMG/1920-1080-Image0003.jpg" alt="team " />
+              <div class="lttr-nws-info d-block">
+                <h3 class="fw-bold fs-14 mb-5">Team Increased</h3>
+                <span class="c-grey fs-13 m-0">3 Developers joined The Time</span>
+              </div>
+              <div class="label mt-10 fs-14 w-fit rad-6 btn-shape bg-eee    c-black">
+                1 Days Ago
+              </div>
+            </div>
+
+
+            <div class="row-l-n d-flex align-center">
+              <img class="rad-6 " src="IMG/1920-1080-Image0004.jpg" alt="team " />
+              <div class="lttr-nws-info d-block">
+                <h3 class="fw-bold fs-14 mb-5">Added Payment Gateway</h3>
+                <span class="c-grey fs-13 m-0">Many New Payment Gateway Add</span>
+              </div>
+              <div class="label mt-10 fs-14 w-fit rad-6 btn-shape bg-eee    c-black">
+                3 Days Ago
+              </div>
+            </div>
+
+ 
+          </div>
+          <!-- End Letest News -->
+
+          <!--Start  test  -->
+          <div class="bg-blue">test</div>
+          <!-- End test  -->
         </div>
       </div>
     </div>

@@ -11,6 +11,21 @@
 /*  
 c-green mt-5 
 */
+/* Button  */
+
+/* Start Quick Draft Widget */
+.page .btn-shape {
+    background-color: var(--color-blue);
+    outline: none;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+}
+
 
 /* Start PAdding et margin */
 
@@ -21,6 +36,12 @@ c-green mt-5
 .m-20 {
     margin: 20px;
 }
+.m-5 {
+    margin: 5px;
+}
+.m-10 {
+    margin: 10px;
+}
 .mt-5 {
     margin-top: 5px;
 } 
@@ -30,8 +51,33 @@ c-green mt-5
 .mt-20 {
     margin-top: 20px;
 } 
+ 
+
+@media (max-width:767px) {
+    
+.mt-20 {
+    margin-top: 10px;
+} 
+
+.p-20 {
+    padding: 10px; 
+}
+}
+
+.mt-40 {
+    margin-top: 40px;
+} 
+.mt-10 {
+    margin-top: 10px;
+} 
 .mb-20  {
     margin-bottom: 20px;
+} 
+.mb-10  {
+    margin-bottom: 10px;
+} 
+.mb-5  {
+    margin-bottom: 5px;
 } 
 .p-20 {
     padding: 20px;
@@ -52,6 +98,9 @@ c-green mt-5
 
 .pt-20 {
     padding-top: 20px;
+}
+.brdr-sold-1-ccc {
+    border: 1px solid #ccc;
 }
 .rad-6 {
     border-radius: 6px;
@@ -92,6 +141,9 @@ c-green mt-5
 .c-grey {
     color: var(--color-grey);
 }
+.c-orange {
+    color: var(--color-orange);
+}
 
 /* End  color et Backgroung color */ 
  /*Start   Box   */
@@ -114,12 +166,33 @@ gap: 20px;
 .d-block { 
     display: block;
 }
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (max-width:767px) {
     .d-block-mobile {
         display: block;
     }
+    .hide-in-mobile {
+        display: none; 
+    }
+    .center-in-mobile{  
+        margin: 30px auto;
+        border-radius: 30px ; 
+        height: 70px;
+        width: 70px;
+       top: -90px !important ;
+left: calc(50% - 70px  + 30px )  !important;
+    } 
+
 } 
+
+.n-border {
+    border: none;
+}
 
  /*End   Box   */ 
  /*Start   Bposition   */ 
@@ -134,6 +207,9 @@ gap: 20px;
  .w-full {
     width:100% ; 
  }
+ .w-fit {
+    width:fit-content ; 
+ }
 
  .justify-center {
     display: flex;
@@ -141,6 +217,19 @@ gap: 20px;
     align-items: center;
  }
  
+ .justify-center-gap {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+ }
+ 
+.f-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
  /*End   Bposition   */ 
  /* Start FONT   */ 
  .txt-c{ 
@@ -154,8 +243,29 @@ gap: 20px;
     text-align: center; 
     }
  }
+ .fs-12 {
+    font-size: 12px;
+ } 
+ .fs-13 {
+    font-size: 13px;
+ } 
  .fs-14 {
     font-size: 14px;
+ } 
+ .fs-15 {
+    font-size: 15px;
+ }
+ .fs-16 {
+    font-size: 16px;
+ }
+ .fs-17 {
+    font-size: 17px;
+ }
+ .fs-20 {
+    font-size: 20px;
+ }
+ .fw-bold {
+    font-weight: bold;
  }
 
  /* End  FONT   */ 
