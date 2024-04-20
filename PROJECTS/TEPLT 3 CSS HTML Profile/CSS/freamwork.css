@@ -42,6 +42,9 @@ c-green mt-5
 .m-10 {
     margin: 10px;
 }
+.mr-10 {
+    margin-right: 10px;
+}
 .mt-5 {
     margin-top: 5px;
 } 
@@ -66,6 +69,9 @@ c-green mt-5
 
 .mt-40 {
     margin-top: 40px;
+} 
+.mt-15 {
+    margin-top: 15px;
 } 
 .mt-10 {
     margin-top: 10px;
@@ -124,7 +130,7 @@ c-green mt-5
     background-color: white;
 } 
 .bg-eee {
-    background-color: #eee;
+    background-color: #eee !important;
 }
 .bg-blue {
     background-color: var(--color-blue);
@@ -133,7 +139,7 @@ c-green mt-5
     color: white;
 } 
 .c-black {
-    color: black;
+    color: black !important;
 } 
 .c-green {
     color: var(--color-green);
@@ -163,6 +169,11 @@ gap: 20px;
 .space-between {
     justify-content: space-between;
 }
+.between-flex {
+    display: flex;
+
+}
+
 .d-block { 
     display: block;
 }
@@ -210,6 +221,9 @@ left: calc(50% - 70px  + 30px )  !important;
  .w-fit {
     width:fit-content ; 
  }
+ .w-70 {
+    width:70px ; 
+ }
 
  .justify-center {
     display: flex;
@@ -247,7 +261,7 @@ left: calc(50% - 70px  + 30px )  !important;
     font-size: 12px;
  } 
  .fs-13 {
-    font-size: 13px;
+    font-size: 13px !important;
  } 
  .fs-14 {
     font-size: 14px;

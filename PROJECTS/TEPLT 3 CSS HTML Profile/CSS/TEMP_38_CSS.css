@@ -236,6 +236,8 @@ ul li a:hover {
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     margin-left: 20px;
     margin-right: 20px;
+
+    padding-bottom: 40px;
 }
 /************* test   **************/
  .page .wrapper > div:last-child  {
@@ -535,6 +537,39 @@ color:black;
     
 }
 /*End News Letest */
+
+/* Start tasks Latest */
+.page .letest-tasks .row-task:not(:last-of-type) {
+padding-bottom: 10px;
+margin-bottom: 10px;
+border-bottom: 1px solid var(--color-grey);
+}
+ .page .letest-tasks .row-task .delete:hover {
+cursor: pointer;
+color: var(--color-red);
+ }
+
+
+.page .done {
+    text-decoration: line-through;
+    color: var(--color-grey);
+}
+
+/* End tasks Latest */
+/* Start aupload Files */
+
+.letest-upload ul li:not(:last-of-type) {
+margin-bottom: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(--color-grey-ccc);
+}
+
+.letest-upload ul li img {
+    width: 40px;
+    height: 40px;
+}
+
+/* End  aupload Files */
 
 /* End Contents */
 
