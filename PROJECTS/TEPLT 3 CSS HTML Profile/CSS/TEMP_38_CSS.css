@@ -467,7 +467,7 @@ ul li a:hover {
 gap: 20px;
 }
 .page .statics .box-tits {
-width: calc(50% - 10px);
+width: calc(50% - 12px);
 }
 
 @media (max-width:767px) { 
