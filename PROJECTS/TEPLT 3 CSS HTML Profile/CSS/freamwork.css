@@ -36,6 +36,12 @@ c-green mt-5
 .m-20 {
     margin: 20px;
 }
+.ml-70{
+    margin-left: 70px;
+}
+.ml-60{
+    margin-left: 60px;
+}
 .m-5 {
     margin: 5px;
 }
@@ -44,6 +50,12 @@ c-green mt-5
 }
 .mr-10 {
     margin-right: 10px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.mr-15{
+    margin-right: 15px;
 }
 .mt-5 {
     margin-top: 5px;
@@ -76,8 +88,14 @@ c-green mt-5
 .mt-10 {
     margin-top: 10px;
 } 
+.mt-25 {
+    margin-top: 25px;
+} 
 .mb-20  {
     margin-bottom: 20px;
+} 
+.mb-30  {
+    margin-bottom: 30px;
 } 
 .mb-10  {
     margin-bottom: 10px;
@@ -90,6 +108,21 @@ c-green mt-5
 }
 .pt-0 {
     padding-top: 0px;
+}
+.pb-10 {
+    padding-bottom: 10px;
+}
+.pb-15 {
+    padding-bottom: 15px;
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.pl-15 {
+    padding-left: 15px;
+}
+.pl-20 {
+    padding-left: 20px;
 }
 .p-5 {
     padding: 5px;
@@ -107,6 +140,9 @@ c-green mt-5
 }
 .brdr-sold-1-ccc {
     border: 1px solid #ccc;
+}
+.b-b-sold-1-ccc {
+    border-bottom: 1px solid #ccc;
 }
 .rad-6 {
     border-radius: 6px;
@@ -126,14 +162,26 @@ c-green mt-5
 /* End PAdding et margin */
 /* Start  color et Backgroung color */
 
+.bg-yellow {
+    background-color: yellow !important;
+} 
+.bg-red {
+    background-color:var(--color-red) !important;
+} 
+.bg-orange {
+    background-color:var(--color-orange) !important;
+} 
+.bg-green {
+    background-color:var(--color-green) !important;
+} 
 .bg-white {
-    background-color: white;
+    background-color: white !important;
 } 
 .bg-eee {
     background-color: #eee !important;
 }
 .bg-blue {
-    background-color: var(--color-blue);
+    background-color: var(--color-blue) !important;
 } 
 .c-white {
     color: white;
@@ -216,7 +264,7 @@ left: calc(50% - 70px  + 30px )  !important;
  }
  
  .w-full {
-    width:100% ; 
+    width:100% ;  
  }
  .w-fit {
     width:fit-content ; 
@@ -286,7 +334,15 @@ left: calc(50% - 70px  + 30px )  !important;
 
 
 
+/*
 
+ <label>
+            <input class="toggle-check" type="checkbox" checked />
+            <div class="toggle-switch"></div>
+          </label>
+
+
+*/
 
 
 
