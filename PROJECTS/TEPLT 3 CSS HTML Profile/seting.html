@@ -118,9 +118,9 @@
           </div>
         </div>
         <!--End  header -->
-        <!-- Start Settings -->
-        <h1 class="p-relative">Dashboard</h1>
-        <div class="setting-page p-20 m-20 d-grid">
+        <!-- Start Settings   Globa-->
+        <h1 class="p-relative">Settings</h1>
+        <div class="setting-page p-20 m-20 d-grid gap-20">
           <!-- Start  Box -->
           <div class="p-20 rad-10 bg-white">
             <h2 class="fw-bold">Site Control</h2>
@@ -147,8 +147,208 @@
             ></textarea>
           </div>
           <!-- End  Box -->
+          <!--Start General Info  -->
+          <div class="info-general p-20 rad-10 bg-white">
+            <h2 class="fw-bold">General Info</h2>
+            <p class="fs-14 mt-10 mb-20 c-grey">
+              General Information About Your Account
+            </p>
+            <div>
+              <label for="ferst">First Name</label>
+              <input
+                type="text"
+                id="ferst"
+                class="d-block brdr-sold-1-ccc w-full p-5 mt-5 rad-6"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="mt-15">
+              <label for="last">Last Name</label>
+              <input
+                type="text"
+                id="last"
+                class="d-block brdr-sold-1-ccc w-full p-5 mt-5 rad-6"
+                placeholder="Last Name"
+              />
+            </div>
+            <div class="mt-15">
+              <label for="email">Email Name</label>
+              <input
+                type="text"
+                id="email"
+                class="email brdr-sold-1-ccc p-5 mt-5 rad-6 disabled-elem"
+                placeholder="email@gmail.ma"
+                disabled
+              />
+              <a class="p-5 c-blue bg-white mt-5 rad-6" href="">Change</a>
+            </div>
+          </div>
+          <!--End  General Info  -->
+
+          <!-- Start Security Info -->
+          <div class="info-securty p-20 rad-10 bg-white">
+            <h2 class="fw-bold">Security Info</h2>
+            <p class="fs-14 mt-10 mb-20 c-grey">
+              Security Information About Your Account
+            </p>
+
+            <div class="box mb-15 pb-10 mt-0 justify-center b-b-sold-1-ccc">
+              <div class="r-l">
+                <span class="d-block fw-bold">Password</span>
+                <p class="fs-14 mt-10 mb-5 c-grey">Last Change On 25/05/2024</p>
+              </div>
+              <div class="r-r">
+                <div class="label btn-shape fs-16">Change</div>
+              </div>
+            </div>
+
+            <div class="box mb-15 pb-10 mt-10 justify-center b-b-sold-1-ccc">
+              <div class="r-l">
+                <span class="d-block fw-bold">Two-Factor Authentication</span>
+                <p class="fs-14 mt-10 mb-5 c-grey">
+                  Enabled/Disabled The Feature
+                </p>
+              </div>
+              <label>
+                <input class="toggle-check" type="checkbox" checked />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+
+            <div class="box mb-20 pb-10 mt-10 justify-center">
+              <div class="r-l">
+                <span class="d-block fw-bold">Devices</span>
+                <p class="fs-14 mt-10 mb-5 c-grey">
+                  Check The Login Devises List
+                </p>
+              </div>
+              <div class="label btn-shape bg-grey c-white">Devises</div>
+            </div>
+          </div>
+          <!-- End Security Info -->
+          <!-- Start Social Info -->
+          <div class="info-social p-20 rad-10 bg-white">
+            <h2 class="fw-bold">Social Info</h2>
+            <p class="fs-14 mt-10 mb-20 c-grey">Social Media Information</p>
+
+            <div class="row-m d-flex align-center mt-10 mb-10">
+              <i
+                class="fa-brands fa-facebook-f c-grey center-flex brdr-sold-1-6f"
+              ></i>
+              <input
+                type="text"
+                class="c-grey fs-16 w-full brdr-sold-1-6f"
+                placeholder="Facebook"
+              />
+              <!--      <i class="fa-brands fa-twitter p-absolut center-flex c-white"></i>
+                  <i class="fa-brands fa-youtube p-absolut center-flex c-white"></i>
+                   <i class="fa-brands fa-linkedin p-absolut center-flex c-white"></i>
+                   <i class="fa-brands fa-square-github p-absolut center-flex c-white"></i>
+               -->
+            </div>
+
+            <div class="row-m d-flex align-center mt-10 mb-10">
+              <i
+                class="fa-brands fa-twitter c-grey center-flex brdr-sold-1-6f"
+              ></i>
+              <input
+                type="text"
+                class="c-grey fs-16 w-full brdr-sold-1-6f"
+                placeholder="twitter"
+              />
+            </div>
+
+            <div class="row-m d-flex align-center mt-10 mb-10">
+              <i
+                class="fa-brands fa-youtube c-grey center-flex brdr-sold-1-6f"
+              ></i>
+              <input
+                type="text"
+                class="c-grey fs-16 w-full brdr-sold-1-6f"
+                placeholder="youtube"
+              />
+            </div>
+
+            <div class="row-m d-flex align-center mt-10 mb-10">
+              <i
+                class="fa-brands fa-linkedin c-grey center-flex brdr-sold-1-6f"
+              ></i>
+              <input
+                type="text"
+                class="c-grey fs-16 w-full brdr-sold-1-6f"
+                placeholder="linkedin"
+              />
+            </div>
+
+            <div class="row-m d-flex align-center mt-10 mb-10">
+              <i
+                class="fa-brands fa-square-github c-grey center-flex brdr-sold-1-6f"
+              ></i>
+              <input
+                type="text"
+                class="c-grey fs-16 w-full brdr-sold-1-6f"
+                placeholder="Github"
+              />
+              <!--      <i class="fa-brands fa-twitter p-absolut center-flex c-white"></i>
+                  <i class="fa-brands fa-youtube p-absolut center-flex c-white"></i>
+                   <i class="fa-brands fa-linkedin p-absolut center-flex c-white"></i>
+                   <i class="fa-brands fa-square-github p-absolut center-flex c-white"></i>
+               -->
+            </div>
+          </div>
+          <!-- End Social Info -->
+          <!-- Start Widget Control -->
+          <div class="widget-control p-20 rad-10 bg-white">
+            <h2 class="fw-bold">Widgets Control</h2>
+            <p class="fs-14 mt-10 mb-20 c-grey">Show/Hide Widget</p>
+
+            <div class="control pt-15 mb-20 d-flex">  
+              <input type="checkbox" name="nom1" id="ligne1">
+              <label for="ligne1">Quick Draft 1</label>
+            </div> 
+             
+ 
+            
+            <div class="control pt-15 mb-20 d-flex">  
+              <input type="checkbox" name="nom1" id="ligne2" checked>
+              <label for="ligne2">Quick Draft 2</label>
+            </div> 
+ 
+            
+            <div class="control pt-15 mb-20 d-flex">  
+              <input type="checkbox" name="nom1" id="ligne3">
+              <label for="ligne3">Quick Draft</label>
+            </div> 
+ 
+            
+            <div class="control pt-15 mb-20 d-flex">  
+              <input type="checkbox" name="nom1" id="ligne4">
+              <label for="ligne4">Quick Draft</label>
+            </div> 
+ 
+
+            <div class="control pt-15 mb-20 d-flex">  
+              <input type="checkbox" name="nom1" id="ligne5" checked>
+              <label for="ligne5">Quick Draft</label>
+            </div> 
+            
+            <div class="control pt-15 mb-0 d-flex">  
+              <input type="checkbox" name="nom1" id="ligne6" checked>
+              <label for="ligne6">Quick Draft 6</label>
+            </div> 
+ 
+             
+          </div>
+          <!-- End Widget Control -->
         </div>
-        <!-- End Settings -->
+        <hr><hr><hr><hr><hr><hr><br/> 
+        <hr><hr><hr><hr><hr><hr><br/> 
+        <hr><hr><hr><hr><hr><hr><br/> 
+        <hr><hr><hr><hr><hr><hr><br/> 
+        <hr><hr><hr><hr><hr><hr><br/> 
+        <hr><hr><hr><hr><hr><hr><br/> 
+        <hr><hr><hr><hr><hr><hr><br/> <hr><hr><hr><hr><hr><hr><hr>
+        <!-- End Settings Global -->
       </div>
     </div>
     <!--End conten  -->
