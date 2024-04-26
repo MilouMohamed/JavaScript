@@ -150,6 +150,9 @@ c-green mt-5
 .b-b-sold-1-ccc  {
     border-bottom: 1px solid #ccc;
 } 
+.b-t-sold-1-ccc  {
+    border-top: 1px solid #ccc;
+} 
 .rad-6 {
     border-radius: 6px;
 }

@@ -1129,7 +1129,62 @@ ul li a:hover {
     display: none;
 }
 
+/*Start Backup Manager*/
+.widget-control   input {
+    appearance: none;
+        --webkit-appearance: none;
+        -webkit-appearance: none;
+          display: none; 
+}
+    
+.widget-control .row-bckup input[type="radio"] { 
+       appearance: none;
+        --webkit-appearance: none;
+        -webkit-appearance: none;
+          display: none; /*     */ 
+}
+.widget-control .row-bckup label {
+    padding: 5px;
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.widget-control .row-bckup label::before ,
+    .widget-control .row-bckup label::after { 
+     position: absolute;
+     content: "";
+     border-radius: 50%;
+     transition: .3s;
+    }
+    .widget-control .row-bckup label::before { 
+        width: 18px;
+        height: 18px;
+        border: 2px solid black;   
+        margin-top: -11px;
+        top: 50%;
+        left: 0;
+    
+}
 
+.widget-control .row-bckup label::after { 
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: var(--color-blue); 
+    left: 4.5px; 
+    top: 8px;  
+    transform: scale(0);
+}
+
+.widget-control .row-bckup input[type="radio"]:checked + label::before {
+    border-color: var(--color-blue); ;
+    }
+    .widget-control .row-bckup input[type="radio"]:checked + label::after {
+   transform: scale(1);
+    }
+
+
+/*End Backup Manager*/
 
 
 
