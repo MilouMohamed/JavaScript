@@ -1084,44 +1084,44 @@ ul li a:hover {
     position: absolute;
     top: 50%;
     content: "";
-    left: 0; 
+    left: 0;
     height: 14px;
-    width: 14px; 
-    transition: .3s;  
+    width: 14px;
+    transition: .3s;
     margin-top: -9px;
     border-radius: 3px;
 }
 
 
 .widget-control .control label::before {
-   
+
     border: 1px solid gray;
     background-color: white;
 
 }
 
 .widget-control .control label::after {
-    
+
     height: 15px;
-    width: 15px; 
+    width: 15px;
     font-family: var(--fa-style-family-classic);
     content: "\f00c";
-    font-weight: 900;  
-    color: white; 
-    font-size: 12px;  
+    font-weight: 900;
+    color: white;
+    font-size: 12px;
     background-color: var(--color-blue);
-  display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center;  
-    transform: scale(0);  
+    align-items: center;
+    transform: scale(0);
 }
 
-.widget-control .control input[type="checkbox"]:checked + label::after {
- transform: scale(1) rotate(360deg);
- background-color: var(--color-blue-alt);
+.widget-control .control input[type="checkbox"]:checked+label::after {
+    transform: scale(1) rotate(360deg);
+    background-color: var(--color-blue-alt);
 
 }
- 
+
 
 
 .widget-control .control input[type="checkbox"] {
@@ -1129,73 +1129,151 @@ ul li a:hover {
     display: none;
 }
 
+/* End Widgets Control  */
 /*Start Backup Manager*/
-.widget-control   input {
+.backup-manage input {
     appearance: none;
-        --webkit-appearance: none;
-        -webkit-appearance: none;
-          display: none; 
+    --webkit-appearance: none;
+    -webkit-appearance: none;
+    display: none;
 }
-    
-.widget-control .row-bckup input[type="radio"] { 
-       appearance: none;
-        --webkit-appearance: none;
-        -webkit-appearance: none;
-          display: none; /*     */ 
+
+.backup-manage .row-bckup input[type="radio"] {
+    appearance: none;
+    --webkit-appearance: none;
+    -webkit-appearance: none;
+    display: none;
+    /*     */
 }
-.widget-control .row-bckup label {
+
+.backup-manage .row-bckup label {
     padding: 5px;
     padding-left: 25px;
     position: relative;
     cursor: pointer;
 }
-.widget-control .row-bckup label::before ,
-    .widget-control .row-bckup label::after { 
-     position: absolute;
-     content: "";
-     border-radius: 50%;
-     transition: .3s;
-    }
-    .widget-control .row-bckup label::before { 
-        width: 18px;
-        height: 18px;
-        border: 2px solid black;   
-        margin-top: -11px;
-        top: 50%;
-        left: 0;
-    
+
+.backup-manage .row-bckup label::before,
+.backup-manage .row-bckup label::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transition: .3s;
 }
 
-.widget-control .row-bckup label::after { 
+.backup-manage .row-bckup label::before {
+    width: 18px;
+    height: 18px;
+    border: 2px solid black;
+    margin-top: -11px;
+    top: 50%;
+    left: 0;
+
+}
+
+.backup-manage .row-bckup label::after {
     content: "";
     height: 12px;
     width: 12px;
-    background-color: var(--color-blue); 
-    left: 4.5px; 
-    top: 8px;  
+    background-color: var(--color-blue);
+    left: 4.3px;
+    top: 8px;
     transform: scale(0);
 }
 
-.widget-control .row-bckup input[type="radio"]:checked + label::before {
-    border-color: var(--color-blue); ;
+.backup-manage .row-bckup input[type="radio"]:checked+label::before {
+    border-color: var(--color-blue);
+    ;
+}
+
+.backup-manage .row-bckup input[type="radio"]:checked+label::after {
+    transform: scale(1);
+}
+
+@media (max-width:767px) {
+
+
+    .backup-manage .servers {
+        flex-wrap: wrap;
     }
-    .widget-control .row-bckup input[type="radio"]:checked + label::after {
-   transform: scale(1);
+}
+
+
+.backup-manage .servers input[type="radio"] {
+    appearance: none;
+    --webkit-appearance: none;
+    -webkit-appearance: none;
+    display: none;
+    /*     */
+}
+
+.backup-manage .servers input:checked+div {
+    border: 2px solid blue;
+    color: blue;
+}
+
+.backup-manage .servers label {
+    cursor: pointer;
+}
+
+/*End Start backup Manager*/
+
+/* Start Profile Page  */
+.profile-page .box-avatar {
+    width: 280px;
+    border-right: 1px solid var(--color-grey);
+}
+
+@media (max-width:767px) {
+
+    .profile-page .box-avatar {
+        border: none;
     }
 
+    .profile-page .overview {
+        flex-direction: column;
+    }
+}
 
-/*End Backup Manager*/
+.profile-page .box-avatar>img {
+    height: 120px;
+    width: 120px;
+    padding: 5px;
+    border: 5px dashed black;
+    border-top-color: red;
+    border-bottom-color: red;
+    border-left-color: green;
+    border-left-color: green;
+    border-top-left-radius: 5px;
+    margin-top: 10px
+}
+
+
+.profile-page .box-avatar .prgres-avatar {
+    width: 50%;
+    height: 7px;
+    background-color: var(--color-grey);
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.profile-page .box-avatar .prgres-avatar span {
+    background-color: var(--color-blue);
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 50px;
+}
+
+
+
+/* End Profile Page  */
 
 
 
 
 
 
-
-
-
-
-/* End Widgets Control  */
 
 
 /*  End Setting    */
