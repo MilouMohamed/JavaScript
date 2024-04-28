@@ -36,6 +36,9 @@ c-green mt-5
 .m-20 {
     margin: 20px;
 }
+.ml-10{
+    margin-left: 10px;
+}
 .ml-70{
     margin-left: 70px;
 }
@@ -120,6 +123,9 @@ c-green mt-5
 }
 .pb-15 {
     padding-bottom: 15px;
+}
+.pr-10 {
+    padding-right: 10px;
 }
 .pl-10 {
     padding-left: 10px;
@@ -287,6 +293,10 @@ left: calc(50% - 70px  + 30px )  !important;
  .w-full {
     width:100% ;  
  }
+ .h-full {
+    height: 100% ;  
+ }
+ 
  .w-fit {
     width:fit-content ; 
  }

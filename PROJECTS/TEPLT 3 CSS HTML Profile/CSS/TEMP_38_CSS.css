@@ -1221,7 +1221,6 @@ ul li a:hover {
 /* Start Profile Page  */
 .profile-page .box-avatar {
     width: 280px;
-    border-right: 1px solid var(--color-grey);
 }
 
 @media (max-width:767px) {
@@ -1264,6 +1263,65 @@ ul li a:hover {
     left: 0;
     width: 50px;
 }
+   
+.box-info .row-info {  
+    text-transform: capitalize;
+    display: flex; 
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-between;
+    border-right: 10px solid var(--color-grey-ccc); 
+   }
+ 
+@media (max-width:767px) {
+
+.box-info .row-info  {  
+  color: #22c55e !important; 
+    flex-direction: column;
+    align-items: center;
+    justify-content:center !important;;
+}
+    
+    
+.box-info .row-info > div{ 
+   text-align: center;
+}
+.box-info .row-info > label{  
+   transform: scale(0.7);
+}
+
+}
+
+
+
+
+.box-info { 
+    border-left:   1px solid var(--color-grey-ccc); 
+}
+
+
+
+.box-info .row-info h4 {
+   padding-bottom: 5px;
+}
+ 
+   
+
+.box-info .row-info > div{ 
+    min-width: 250px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
