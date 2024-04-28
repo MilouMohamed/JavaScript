@@ -8,11 +8,7 @@
     --color-grey-ccc: #ccc;
 }
 
-.ttttssstt {
-    margin-bottom: 100px;
-    height: 300px;
-    position: absolute;
-}
+ 
 
 * {
     margin: 0;
@@ -1220,7 +1216,8 @@ ul li a:hover {
 
 /* Start Profile Page  */
 .profile-page .box-avatar {
-    width: 280px;
+    width: 280px; 
+    margin: auto;
 }
 
 @media (max-width:767px) {
