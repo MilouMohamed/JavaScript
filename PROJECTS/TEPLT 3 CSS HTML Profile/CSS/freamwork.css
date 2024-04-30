@@ -115,6 +115,9 @@ c-green mt-5
 .pt-0 {
     padding-top: 0px;
 }
+.pt-10 {
+    padding-top: 10px;
+}
 .pt-15 {
     padding-top: 15px;
 }
@@ -224,6 +227,9 @@ c-green mt-5
 }
 .c-blue {
     color: var(--color-blue);
+}
+.c-red {
+    color: var(--color-red);
 }
 
 /* End  color et Backgroung color */ 
@@ -397,5 +403,3 @@ left: calc(50% - 70px  + 30px )  !important;
 
 
 /*                              */
-
-

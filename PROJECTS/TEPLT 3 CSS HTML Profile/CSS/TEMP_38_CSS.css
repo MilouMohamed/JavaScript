@@ -8,7 +8,7 @@
     --color-grey-ccc: #ccc;
 }
 
- 
+
 
 * {
     margin: 0;
@@ -181,6 +181,14 @@ ul li a:hover {
 .page .conten .header input:hover {
     width: 250px;
 }
+
+@media (max-width:545px) {
+    
+.page .conten .header input:hover {
+    width: 200px;
+}
+}
+
 
 .page .conten .header input:focus::placeholder {
     color: var(--color-blue);
@@ -1216,7 +1224,7 @@ ul li a:hover {
 
 /* Start Profile Page  */
 .profile-page .box-avatar {
-    width: 280px; 
+    width: 280px;
     margin: auto;
 }
 
@@ -1260,69 +1268,518 @@ ul li a:hover {
     left: 0;
     width: 50px;
 }
-   
-.box-info .row-info {  
+
+.box-info .row-info {
     text-transform: capitalize;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    justify-content:space-between;
-    border-right: 10px solid var(--color-grey-ccc); 
-   }
- 
+    align-items: center;
+    justify-content: space-between;
+    border-right: 10px solid var(--color-grey-ccc);
+}
+
 @media (max-width:767px) {
 
-.box-info .row-info  {  
-  color: #22c55e !important; 
-    flex-direction: column;
-    align-items: center;
-    justify-content:center !important;;
-}
-    
-    
-.box-info .row-info > div{ 
-   text-align: center;
-}
-.box-info .row-info > label{  
-   transform: scale(0.7);
-}
+    .box-info {
+        margin-bottom: 40px;
+        padding-bottom: 0;
+    }
+
+    .box-info .row-info {
+        color: #22c55e !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+    }
+
+
+    .box-info .row-info>div {
+        text-align: center;
+    }
+
+    .box-info .row-info>label {
+        transform: scale(0.7);
+    }
 
 }
 
 
 
 
-.box-info { 
-    border-left:   1px solid var(--color-grey-ccc); 
+.box-info {
+    border-left: 1px solid var(--color-grey-ccc);
 }
 
 
 
 .box-info .row-info h4 {
-   padding-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.box-info .row-info>div {
+    min-width: 250px;
+}
+
+/*  Start My activites                 */
+
+
+
+
+
+@media (max-width:767px) {
+    .skls-activ {
+        flex-direction: column;
+    }
+
+
+    .skls-activ .box-skils ul li {
+        justify-content: center;
+    }
+}
+
+.skls-activ .box-skils {}
+
+.skls-activ .box-activite {
+    flex-grow: 1;
+}
+
+.skls-activ .box-skils ul li:not(:last-of-type) {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed black;
+}
+
+.skls-activ .box-skils ul li span {
+    padding: 5px 8px;
+}
+
+.skls-activ .box-skils ul li span:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+/********************************************/
+
+
+.box-activite img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+@media (max-width:767px) {
+
+    .row-activty {
+        flex-direction: column;
+    }
+
+    .box-activite img {
+        margin: 0 0 10px 0;
+    }
+}
+
+
+.skls-activ div.row-activty:not(:last-of-type) {
+
+    border-bottom: 1px dotted black;
+}
+
+
+.box-activite .date span,
+.box-activite .info span {
+    margin-bottom: 5px;
+}
+
+
+.box-activite .date {
+    margin-left: auto;
+    text-align: right;
+}
+
+@media (max-width:767px) {
+
+    .box-activite .date {
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .profile-page {
+        margin: 5px;
+        padding: 5px;
+    }
+
+}
+
+
+
+/*  End My activites                 */
+/* End Profile Page  */
+
+/* Start Project Page */
+.projects-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+
+}
+
+.projects-page .box-project .date {
+    top: 20px;
+    right: 20px;
+}
+
+@media (max-width:767px) {
+    .projects-page {
+        margin: 5px;
+        padding: 5px;
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
+
+.projects-page .box-project .team {
+    min-height: 80px;
+}
+
+.projects-page .box-project .team img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: absolute;
+    animation: change-bg-colo 10s linear infinite;
+    border: 2px solid white;
+    transition: 1s;
+}
+
+.projects-page .box-project .team img:hover {
+    z-index: 10;
+    border-color: black;
+    height: 55px;
+    width: 55px;
+    border-top-left-radius: 0%;
+}
+
+.projects-page .box-project .team a:nth-child(2) img {
+    margin-left: 25px;
+}
+
+.projects-page .box-project .team a:nth-child(3) img {
+    margin-left: 50px;
+}
+
+.projects-page .box-project .team a:nth-child(4) img {
+    margin-left: 75px;
+}
+
+.projects-page .box-project .team a:nth-child(5) img {
+    margin-left: 100px;
+}
+
+.projects-page .box-project .team a:nth-child(6) img {
+    margin-left: 125px;
+}
+
+.projects-page .box-project .team a:nth-child(7) img {
+    margin-left: 150px;
+}
+
+
+@keyframes change-bg-colo {
+
+    0%,
+    100% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    75% {
+        background-color: green;
+    }
+}
+
+.projects-page .box-project .do {
+    justify-content: end;
+}
+
+@media (max-width:767px) {
+
+    .projects-page .box-project .do {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+}
+
+.projects-page .box-project .do span {
+    padding: 4px 8px;
+}
+
+.projects-page .box-project .do span:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+@media (max-width:767px) {
+    .projects-page .box-project .do span {
+        margin-top: 5px;
+    }
+
+    .projects-page .box-project .do span:not(:last-of-type) {
+        margin-right: 5px;
+    }
+}
+
+.projects-page .box-project .info .proges {
+    width: 80%;
+    background-color: black;
+    height: 8px;
+}
+
+
+
+.projects-page .box-project .info .proges .prog-bar {
+    background-color: red;
+    height: 100%;
+}
+
+.projects-page .box-project:nth-child(3n) .info .proges .prog-bar {
+    background-color: green;
+}
+
+.projects-page .box-project:nth-child(3n +1) .info .proges .prog-bar {
+    background-color: blue;
+}
+
+/* End Project Page */
+/* Start Courses  Page */
+
+/*
+.courses-page {}  */
+
+.courses-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+@media (max-width:767px) {
+    .courses-page {
+        margin: 5px;
+        padding: 5px;
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
+
+.courses-page .course  {
+    overflow: hidden;
+}
+
+.courses-page .course  {
+    overflow: hidden;
+}
+
+.courses-page .course  .couver{
+    max-width: 100%;
+    max-height: 150%;
+}
+.courses-page .course  .couver{
+    max-width: 100%;
+    max-height: 150%;
+}
+
+.course .avatar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 65px;
+    width:  65px;
+    border-radius: 15%;
+    border: 3px solid white;
+    animation:  change-bg-colo  5s linear infinite;
+    animation:   bg-blk-wht 10s linear infinite;
+
+}
+
+@keyframes bg-blk-wht  {
+    0%,100% {
+        background-color: black;
+        border-color:  white; 
+        
+    } 
+    
+    50% {
+        background-color: white; 
+        border-color:  black;
+
+    } 
+}
+
+.courses-page .course p {
+    line-height: 1.6;
+}
+
+.courses-page .course .icons-btn { 
+    padding:5px 20px 10px;
+    margin-top: 10px;
+    
+}
+.courses-page .course .info-cours + div span {
+    color:gray;
+    font-size: 13px; 
 }
  
-   
+.courses-page .course .info-cours + div .btn-shape {
+    color:white; 
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+} 
+/* End Courses  Page */
+/* Start friends  Page */
 
-.box-info .row-info > div{ 
-    min-width: 250px; 
+
+.friends-page  { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px; 
+}
+
+ 
+@media (max-width:767px) {
+    .friends-page  {
+        margin: 5px;
+        padding: 5px; 
+    }
+}
+
+.friends-page .friend { 
+    
+}
+
+
+.friends-page .friend .avatar {
+    height: 100px;
+    width:  100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px  black , 0 0 5px  white;
+    animation: box-shado-rotate 3s linear infinite;
+}
+@keyframes  box-shado-rotate {
+    0%,100% { 
+    box-shadow: 5px 0 10px  red , 10px 0 5px  green;
+    } 
+    25% { 
+    box-shadow: 0 5px 5px  red , 0 10px 10px  green;
+    }
+    50% { 
+    box-shadow: -5px 0 10px  red , -10px 0 5px  green;
+    }
+    75% { 
+    box-shadow: 0 -5px 5px  red ,0 -10px 10px  green;
+    }
 }
 
 
 
+.friends-page .friend .icons {
+    display: flex;
+}
+.friends-page .friend .icons i {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+     height: 30px;
+    width:  30px;
+    margin-right: 5px; 
+    cursor: pointer;
+    border:1px solid blue;
+}
+
+.friends-page .friend .icons i:hover {
+    
+    animation: change-bg 1s infinite linear;
+}
+
+.friend .detals div:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+.friend .detals i {
+    margin-right: 8px;
+}
+
+.friends-page .friend .detals .vip-div {
+    position: absolute;
+    color: yellow;
+    right: 20px;
+    bottom: 15px;
+    font-size: 70px;
+    font-weight: 900;
+    opacity: .3;
+}
+
+/* End friends  Page */ 
+/* Start Files  Page */ 
+
+.page .files-page {
+    
+}
+ 
+.page .files-page .file-statics {
+    width: 280px;
+}
+
+.page .files-page .file-statics .file-static-row:last-of-type{
+  margin-bottom: 20px
+}
+
+.page .files-page .file-statics .file-static-row i {
+   height: 45px;
+    width: 45px; 
+    font-size: 22px;
+}
+.page .files-page .file-statics .file-static-row i.blue {
+  background-color: #0000ff4f;
+}
+.page .files-page .file-statics .file-static-row i.red {
+  background-color: #ff000063;
+}
+.page .files-page .file-statics .file-static-row i.green {
+  background-color: #00800082;
+}
+.page .files-page .file-statics .file-static-row i.orange {
+  background-color: #ffa50063;
+}
+.page .files-page .file-statics .file-static-row > span { 
+   margin-left: auto; 
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+}
+
+.page .files-page .file-statics .btn-up { 
+    margin: 0px auto ;
+    display: block;
+}
+.page .files-page .file-statics .btn-up:hover  i{ 
+   animation: up-down .5s linear infinite;
+    color: red;
+}
+@keyframes  up-down {
+    0%,100% {
+        transform: translateY(3px);
+    }
+   50% {
+        transform: translateY(-3px);
+    }
+}
 
 
+/* End Files  Page */ 
 
-
-
-
-
-
-
-
-
-
-/* End Profile Page  */
 
 
 
