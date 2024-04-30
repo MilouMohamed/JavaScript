@@ -1725,12 +1725,27 @@ ul li a:hover {
 /* Start Files  Page */ 
 
 .page .files-page {
+    display: flex;
+    flex-direction:row-reverse; 
+    align-items:flex-start;  
     
+}
+
+
+@media (max-width:767px) {
+.page .files-page { 
+    flex-direction:column; 
+   align-items:normal;
+    gap: 10px; 
+    margin-left: 10px;
+    margin-right:  10px;
+}
 }
  
 .page .files-page .file-statics {
-    width: 280px;
+    min-width: 230px;
 }
+  
 
 .page .files-page .file-statics .file-static-row:last-of-type{
   margin-bottom: 20px
@@ -1776,9 +1791,127 @@ ul li a:hover {
         transform: translateY(-3px);
     }
 }
+/* start Files Contents */
+.files-page .file-content  { 
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); 
+    flex: 1; 
+}
+
+@media (max-width:767px) {
+    
+.files-page .file-content  { 
+  gap: 10px;
+} 
+}
+
+.files-page .file-content  .file img {
+    height: 64px;
+    width: 64px;
+    margin: 15px auto;
+    display: block;
+}
+
+.files-page .file-content  .file:hover img { 
+   animation: up-down 1.2s linear infinite;
+}
+
+ 
 
 
+
+
+/* end Files Contents */ 
 /* End Files  Page */ 
+/* Start Plan  Page */ 
+
+.plans-page  { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap: 20px; 
+}
+
+ 
+@media (max-width:767px) {
+   .plans-page  {
+        margin: 5px;
+        padding: 5px; 
+    }
+} 
+
+.plan.green .head-plan {
+
+    border: 2px solid white;
+}
+.plan.green .head-plan  {  
+    background-color: green;
+    outline: 2px solid green;
+}
+
+.plan.blue .head-plan  {  
+    background-color: var(--color-blue);
+    border: 2px solid white;
+    outline: 2px solid var(--color-blue);
+}
+
+.plan.orange .head-plan  {  
+    background-color: var(--color-orange);
+    border: 2px solid white;
+    outline: 2px solid var(--color-orange);
+}
+
+.plan .head-plan div:not(.price)  { 
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.plan .head-plan div.price  {
+    width: max-content;
+    margin: 2px auto;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+
+.plans-page .plan .body-plan {
+    padding: 5px;
+}
+
+
+.plans-page .plan .body-plan ul li    {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+.plans-page .plan .body-plan ul li i:first-child    { 
+    margin-right:  10px;
+}
+.plans-page .plan .body-plan ul li i:last-child   { 
+    margin-left:   auto;
+}
+
+
+
+.plans-page .plan .body-plan ul li i{
+    font-size: 19px
+}
+
+.plans-page .plan .body-plan ul li i.yes{
+    color: green;
+}
+
+.plans-page .plan .body-plan ul li i:not(.help , .yes){
+    color: red;
+}
+
+
+
+
+
+
+
+/* End Plan  Page */ 
 
 
 
