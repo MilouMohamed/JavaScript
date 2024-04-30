@@ -1826,13 +1826,27 @@ ul li a:hover {
 
 .plans-page  { 
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
     gap: 20px; 
 }
 
+.plans-page  {
+    
+}
  
+@media (min-width:1577px) {
+   .plans-page  {
+       
+    grid-template-columns: repeat(auto-fill,minmax(390px,1fr));
+        margin: 30px;
+        padding: 30px; 
+       gap: 60px
+    }
+} 
 @media (max-width:767px) {
    .plans-page  {
+       
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
         margin: 5px;
         padding: 5px; 
     }
@@ -1900,11 +1914,17 @@ ul li a:hover {
 .plans-page .plan .body-plan ul li i.yes{
     color: green;
 }
+.plans-page .plan .body-plan ul li i.help{
+  cursor: pointer;
+}
 
 .plans-page .plan .body-plan ul li i:not(.help , .yes){
     color: red;
 }
 
+.plans-page .plan .body-plan ul {
+    margin-bottom: 15px
+}
 
 
 
