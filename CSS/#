@@ -1,0 +1,189 @@
+:root {
+    --color-blue:#0075ff;
+    --color-blue-alt:#0d69d5;
+    --color-orange:#f59e0b;
+    --color-green:#22c55e; 
+    --color-red:#f44336; 
+    --color-grey:#888;    
+    --color-grey-ccc:#ccc; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background-color: #a3a1a1;  
+  font-family: 'Open Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*:focus {
+    outline: none;
+}
+.page {
+    min-height: 100vh;
+}
+.page .sidebar  {
+    width: 170px;
+}
+
+.page .sidebar > h3 {
+    position: relative;
+    padding-bottom: 10px; 
+    width: max-content;
+    margin: 0 auto;
+}
+
+
+.page .sidebar >h3:after,
+.page .sidebar >h3:before
+{
+    position: absolute;
+    content: "";
+    bottom:  -1px;
+    left: 50%;  
+    background-color: black;
+    transform: translateX(-50%); 
+}
+.page .sidebar > h3:before {
+    height:  2px;
+    width: 100%;
+    
+}
+.page .sidebar > h3:after  {
+    height:  12px;
+    width: 12px;
+    bottom:  -9px;
+    
+    border-radius: 50%;
+    border: 3px solid  white;
+    
+}
+
+
+.page .sidebar ul {
+    list-style: none;
+    padding: 0; 
+}
+ 
+
+.page .sidebar ul li:not(:first-child) {  
+    margin-top: 5px;
+}
+ 
+
+ul li a span { 
+    margin-left:  10px;
+}
+
+ul li a {
+    transition: .5s;
+}
+
+ul li a.active ,
+    ul li a:hover  {
+    background-color: #f1ebeb;
+}
+
+@media (max-width:767px) {
+    
+    .page .sidebar a >i { 
+        margin: 1px auto
+    }
+    
+.page .sidebar  {
+    width: 58px; 
+    padding: 5px; 
+}
+.page .sidebar ul li span  {
+    display: none;
+}
+.page .sidebar > h3  {
+   font-size: 13px;
+    padding: 5px 5px 15px;
+    margin: 0px auto 10px;
+} 
+     
+}
+
+/* Start Contents */
+.page .conten .header .icons-img {
+   align-items: center;
+    gap: 20px;
+}
+
+/*
+--fa-style-family-classic
+*/
+
+.page .conten .header .sercher {
+    position: relative;
+}
+.page .conten .header .sercher:before {
+    font-family: var(--fa-style-family-classic);
+     content: "🔍"; 
+     contents: "\f002"; 
+    position: absolute;
+    top: 50%;
+    left:  5px;  
+    font-size: 13px;
+    transform: translateY(-50%);
+    
+}
+.page .conten .header input { 
+    border-radius: 5px;  
+    padding-left: 30px;
+   
+    border: 1px solid var( --color-grey-ccc);
+     width: 150px; 
+    transition: width .3s;
+}
+.page .conten .header input:hover {
+    border: 1px solid blue;
+}
+.page .conten .header input:focus::placeholder {
+    color: blue; 
+    width: 200px; 
+}
+
+ 
+.page .conten .header .icons-img i {  
+    position: relative;
+    background-color: red
+}
+ 
+.page .conten .header  .icons-img i :before { 
+   content: "🔍";
+   content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: green; 
+}
+
+
+
+
+.page .conten .header img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+
+
+/* End Contents */
+
+
+
+
+
+
+
+
+
+
