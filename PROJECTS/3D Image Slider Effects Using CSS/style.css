@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+box-sizing: border-box; 
+}
+ 
+
+ /* .banner .slider .item1 */
+
+.banner {
+    height: 100vh;
+    width: 100%; 
+    position: relative;
+    text-align: center; 
+    overflow: hidden;
+}
+
+.banner .slider {
+    position: absolute;
+    height: 250px;
+    width: 200px;
+    top: 10%;
+    left: calc(50% - 100px);  
+    transform-style:preserve-3d;
+    transform: perspective(1000px);
+    animation: rota 15s linear infinite;
+}
+
+@keyframes rota {
+     
+    0%{
+        transform: perspective(1000px)  
+          rotateX(-14deg)   rotateY(0deg);
+    } 
+  100%{
+        transform: perspective(1000px)  
+          rotateX(-14deg)  rotateY(360deg) ;
+    } 
+}
+
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0 ;
+    transform: rotateY( calc((var(--positio) - 1 )*
+        (360 / var(--quantite)) * 1deg ) ) 
+        translateZ(550px) ;
+    
+}
+
+.banner .slider .item  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
