@@ -1,0 +1,240 @@
+
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 3px;
+counter-set: link-one;
+    }
+ul{
+  list-style: none;
+}
+    header {
+      position: fixed;
+      background-color: rgb(215, 215, 215);
+      top: 0;
+      left: 0;
+      width: 100%;
+z-index: 10;
+
+      .my-div-header {
+        width: inherit;
+        display: flex;
+      }
+
+      .logo {
+        flex: 1;
+        height: 40px;
+        padding: 15px;
+        line-height: 10px;
+      }
+
+      .ul-ligne-nav {
+        display: flex;
+        list-style: none;
+
+        li {
+          height: 100%;
+          margin-left: 5px;
+
+          a {
+            height: 100%;
+            margin: 0;
+            text-decoration: none;
+
+            display: inline-block;
+            padding: 15px 8px;
+            line-height: 10px;
+            color: rgb(25, 25, 0);
+
+            /* display:flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+
+            &:hover {
+              background-color: rgb(255, 255, 255);
+              color:red;
+            }
+
+          }
+        }
+      }
+
+    }
+
+
+    /* Container  */
+    .contaiber_div {
+      padding: 0 20px;
+      padding: 20px;
+      margin-top: 40px;
+
+      hr {
+        padding: 5px;
+        margin: 20px;
+        color: brown;
+        background-color: black;
+      }
+    }
+
+
+
+    /* Footer  */
+    .my-fotr {
+      width: 100%;
+      height: max-content;
+      padding: 10px 0px;
+      margin: 0 auto;
+      background-color: black;
+      color: blanchedalmond;
+      p {
+        text-align: center;
+      }
+
+      #my-sp-date {
+        color: aqua;
+
+      }
+    } 
+
+
+.contaiber_div {
+  padding: 0 60px;   
+}
+@media (max-width:662px) {
+  
+.contaiber_div {
+  padding: 0 20px;  
+}
+}
+
+
+
+.contaiber_div .my-list { 
+  display: grid;
+  grid-template-columns:  repeat(auto-fill,minmax(300px,1fr));
+  gap: 15px;
+}
+
+
+.contaiber_div .my-list li {
+  background-color: rgba(1,1,1,1);
+  height: 200px; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content:space-between;
+  
+}
+
+
+.contaiber_div .my-list li i {
+  margin: 20px auto 0px; 
+  color: red;  
+  transition: .5s;
+}
+.contaiber_div .my-list li i:hover {
+  color: white; 
+ 
+}
+.contaiber_div .my-list li a {
+  margin: 0px auto  20px ; 
+  color: white; 
+  transition: .5s;
+  
+}
+
+.contaiber_div .my-list li a:hover { 
+  color: red; 
+}
+
+.contaiber_div .my-list li  .info{
+  display: flex;
+  justify-content: space-between; 
+  background-color:gray ;   
+  padding: 10px; 
+  counter-increment: link-one;
+  position: relative;
+  cursor: none;
+  line-height: 20px;
+  color: white;
+    position: relative;
+  overflow: hidden;
+}
+/******************************/
+ 
+.contaiber_div .my-list li  .info:before{
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 180%; 
+  background-image: linear-gradient(90deg,green 50%,blue 50%);
+  
+  bottom:  -12px;
+  right:  70px;
+  z-index: 3;
+  transform: rotateZ(25deg);
+
+}
+ 
+
+
+
+.contaiber_div .my-list li:after{
+  content: counter(link-one);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: red; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  width: 80px; 
+  height: 40px; 
+}
+ 
+
+/*  effect up              */
+
+.contaiber_div .my-list li:before{
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 10%;
+  top: 0;
+  left: 45%; 
+  background-color: red;
+   transition: .8s;
+}
+
+.contaiber_div .my-list li:hover:before {
+  width: 100%;
+  left: 0%; 
+   
+}
+ 
+.contaiber_div .my-list li:hover  .info:before{ 
+  
+  background-image: linear-gradient(90deg,green 50%,red 50%);
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
