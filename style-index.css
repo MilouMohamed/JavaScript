@@ -72,7 +72,8 @@ z-index: 10;
     .contaiber_div {
       padding: 0 20px;
       padding: 20px;
-      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-top: 80px;
 
       hr {
         padding: 5px;
@@ -118,7 +119,7 @@ z-index: 10;
 .contaiber_div .my-list { 
   display: grid;
   grid-template-columns:  repeat(auto-fill,minmax(300px,1fr));
-  gap: 15px;
+  gap: 18px;
 }
 
 
@@ -130,7 +131,12 @@ z-index: 10;
   flex-direction: column;
   position: relative;
   justify-content:space-between;
+  transition: .5s;
   
+}
+
+.contaiber_div .my-list li:hover {
+  transform: scale(1.05 )  translateY(-10px);
 }
 
 
