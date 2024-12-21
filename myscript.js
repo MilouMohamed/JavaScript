@@ -1,4 +1,4 @@
-console.log("first");
+ console.log("MILOU MED");
 
 window.onload = () => {
 
@@ -50,9 +50,8 @@ var doc= document.querySelector(".contaiber_div") ;
   
   async function addText(elemnt_txt) {
       var my_h1 = document.querySelector(elemnt_txt);
-      console.log(my_h1);
-    var txt = my_h1.innerHTML+" ...";
-    console.log(txt, txt.length);
+   
+    var txt = my_h1.innerHTML+" ..."; 
     my_h1.innerHTML = "";
 
     for (let index = 0; index < txt.length; index++) { 
